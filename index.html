@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WaggleTails — Handmade Pet Collars, Bow Ties & Bandanas | Pakistan</title>
+<meta name="description" content="Soft on fur. Gentle on skin. Hand-crocheted and hand-stitched pet collars, bow ties, neck ties, bandanas and glow-in-the-dark collars, made by women artisans in Pakistan. Cash on delivery nationwide.">
+<meta property="og:title" content="WaggleTails — Handmade Pet Accessories">
+<meta property="og:description" content="Hand-crocheted collars, bow ties and bandanas made in Pakistan. Custom colours available.">
+<meta property="og:image" content="/assets/brand/waggletails-logo.png">
+<link rel="icon" href="/assets/brand/logo-mark.png">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  :root{
+    --navy:#14243f; --navy-700:#0d1a2f;
+    --teal:#2bb8b6; --teal-050:#e2f6f5;
+    --coral:#f4566b; --coral-050:#fee7ea;
+    --orange:#f7862a; --orange-050:#fdeedd;
+    --cream:#fdf7f0; --paper:#ffffff; --line:#ece2d6; --muted:#7b7268;
+    --disp:"Baloo 2",cursive; --body:"Hanken Grotesk",sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--cream);color:var(--navy);font-family:var(--body);-webkit-font-smoothing:antialiased;}
+  a{color:var(--teal);text-decoration:none;}
+  a:hover{color:var(--coral);}
+  ::selection{background:var(--teal);color:#fff;}
+  section{scroll-margin-top:100px;}
+  input,textarea,button{font-family:inherit;}
+  ::-webkit-scrollbar{width:10px;height:10px;}
+  ::-webkit-scrollbar-thumb{background:#e0d3c2;border-radius:20px;border:3px solid var(--cream);}
+  html,body{overflow-x:hidden;}
+  img{max-width:100%;}
+  @media (max-width:760px){
+    [data-r="hdr"]{flex-wrap:wrap;height:auto !important;padding:10px 16px !important;row-gap:8px;gap:12px !important;}
+    [data-r="nav"]{order:3;width:100%;overflow-x:auto;gap:18px !important;padding-bottom:4px;scrollbar-width:none;}
+    [data-r="nav"]::-webkit-scrollbar{display:none;}
+    [data-r="modal"]{overflow-y:auto !important;}
+    [data-r="modal"] > div{overflow:visible !important;}
+  }
+  @keyframes wtFade{from{opacity:0}to{opacity:1}}
+  @keyframes wtSlide{from{transform:translateX(100%)}to{transform:translateX(0)}}
+  @keyframes wtPop{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+  @keyframes wtFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+</style>
+</helmet>
+
+<div style="min-height:100%;background:var(--cream);">
+
+  <div style="background:var(--navy);color:#fdf7f0;text-align:center;font-size:13px;font-weight:600;letter-spacing:.02em;padding:10px 16px;">{{ shipMsg }}</div>
+
+  <header style="position:sticky;top:0;z-index:50;overflow:visible;background:rgba(253,247,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);">
+    <div data-r="hdr" style="max-width:1200px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;gap:26px;">
+      <a href="#home" style="display:flex;align-items:center;"><img src="assets/brand/waggletails-logo.png" alt="WaggleTails" style="height:46px;width:auto;display:block;"></a>
+      <nav data-r="nav" style="display:flex;gap:22px;font-weight:600;font-size:14.5px;align-items:center;white-space:nowrap;">
+        <a href="#glow" style="display:inline-flex;align-items:center;gap:6px;color:#07090e;background:#f3d27a;padding:6px 12px;border-radius:20px;box-shadow:0 0 14px rgba(243,210,122,.7);">Glow ✦</a>
+        <sc-for list="{{ navLinks }}" as="n" hint-placeholder-count="5"><a href="{{ n.href }}" style="color:{{ n.color }};background:{{ n.bg }};padding:{{ n.pad }};border-radius:{{ n.radius }};box-shadow:{{ n.shadow }};border-bottom:2px solid {{ n.line }};">{{ n.label }}</a></sc-for>
+      </nav>
+      <div data-r="bag" style="margin-left:auto;display:flex;align-items:center;gap:12px;">
+        <button onClick="{{ openCart }}" style="position:relative;display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px;color:#fff;background:var(--coral);padding:11px 17px;border:none;border-radius:11px;cursor:pointer;box-shadow:0 3px 0 #d43e52;" style-hover="background:#e8485c;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3.5h2l2.2 12.1a1.5 1.5 0 001.5 1.2h8.6a1.5 1.5 0 001.5-1.2l1.4-7.3H6.2"/></svg>
+          Bag
+          <sc-if value="{{ hasCart }}" hint-placeholder-val="{{ false }}"><span style="min-width:20px;height:20px;padding:0 5px;border-radius:20px;background:#fff;color:var(--coral);font-size:12px;font-weight:800;display:grid;place-items:center;">{{ cartCount }}</span></sc-if>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <span id="top"></span>
+
+  <sc-if value="{{ pg.home }}" hint-placeholder-val="{{ true }}">
+  <section style="max-width:1200px;margin:0 auto;padding:clamp(18px,3.2vh,44px) 20px clamp(18px,3vh,32px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(20px,3vw,40px);align-items:center;">
+    <div>
+      <span style="display:inline-flex;align-items:center;gap:8px;background:var(--teal-050);color:#12807e;font-weight:700;font-size:12.5px;padding:7px 14px;border-radius:20px;letter-spacing:.04em;">HANDMADE IN PAKISTAN</span>
+      <h1 style="font-family:var(--disp);font-size:clamp(36px,min(8vw,7vh),62px);line-height:1.03;font-weight:800;letter-spacing:-.02em;margin:clamp(10px,1.8vh,18px) 0 0;color:var(--navy);">Soft on fur.<br>Gentle on <span style="color:var(--coral);">skin</span>.</h1>
+      <p style="font-size:clamp(15px,2vh,18px);line-height:1.55;color:var(--muted);max-width:450px;margin:clamp(10px,2vh,20px) 0 0;">Hand-stitched collars, bow ties, neck ties and bandanas — made in small batches for the most-loved pets in Pakistan. Adjustable, breathable, and kind to sensitive skin.</p>
+      <div style="display:flex;gap:14px;margin-top:clamp(16px,3vh,32px);flex-wrap:wrap;">
+        <a href="#shop" style="display:inline-flex;align-items:center;gap:9px;background:var(--teal);color:#fff;font-weight:700;font-size:15px;padding:15px 26px;border-radius:13px;box-shadow:0 4px 0 #1e9a98;" style-hover="background:#25a5a3;">Shop the collection
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#custom" style="display:inline-flex;align-items:center;gap:9px;color:var(--navy);font-weight:700;font-size:15px;padding:15px 24px;border-radius:13px;border:1.5px solid var(--navy);" style-hover="background:var(--paper);">See the charm collars</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:14px 30px;margin-top:clamp(16px,3.4vh,40px);">
+        <div><div style="font-family:var(--disp);font-size:28px;font-weight:800;color:var(--teal);">100%</div><div style="font-size:13px;color:var(--muted);font-weight:600;">hand-stitched</div></div>
+        <div style="width:1px;background:var(--line);"></div>
+        <div><div style="font-family:var(--disp);font-size:28px;font-weight:800;color:var(--coral);">Skin-safe</div><div style="font-size:13px;color:var(--muted);font-weight:600;">soft-lined bands</div></div>
+        <div style="width:1px;background:var(--line);"></div>
+        <div><div style="font-family:var(--disp);font-size:28px;font-weight:800;color:var(--orange);">COD</div><div style="font-size:13px;color:var(--muted);font-weight:600;">all over Pakistan</div></div>
+      </div>
+    </div>
+    <div style="position:relative;display:grid;place-items:center;">
+      <div style="position:absolute;inset:2% 0 0 0;background:var(--orange-050);border-radius:48% 52% 55% 45%/55% 48% 52% 45%;animation:wtFloat 8s ease-in-out infinite;"></div>
+      <img src="assets/brand/waggletails-logo.png" alt="WaggleTails — Soft on Fur. Gentle on Skin." style="position:relative;width:82%;max-width:min(420px,calc(100vh - 330px));min-width:220px;height:auto;display:block;filter:drop-shadow(0 16px 28px rgba(20,36,63,.16));">
+    </div>
+  </section>
+  </sc-if>
+
+  <sc-if value="{{ pg.glowOn }}" hint-placeholder-val="{{ true }}">
+  <section id="glow" style="background:#07090e;color:#f3e6cf;">
+    <div style="background:radial-gradient(900px 520px at 75% 40%, rgba(125,255,168,.12), transparent 70%);">
+      <div style="max-width:1200px;margin:0 auto;padding:48px 24px 64px;min-height:calc(100vh - 140px);box-sizing:border-box;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:48px;align-items:center;">
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <span style="font-size:12px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:#7dffa8;">The Glow Collection</span>
+          <h1 style="font-family:var(--disp);font-size:clamp(42px,5.4vw,68px);line-height:1;font-weight:700;margin:0;color:#e6ffe9;text-shadow:0 0 30px rgba(125,255,168,.4);text-wrap:balance;">Same charm by day. Magical glow by night.</h1>
+          <p style="font-size:17.5px;line-height:1.6;color:#cfc6b6;margin:0;max-width:480px;text-wrap:pretty;">Pakistan's first glow-in-the-dark crochet pet accessories — nine handmade designs, each in five glow-yarn colours.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;"><span style="font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:9px 14px;border-radius:999px;border:1px solid rgba(157,255,176,.35);color:#c9ffd4;">Glows in the dark</span><span style="font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:9px 14px;border-radius:999px;border:1px solid rgba(157,255,176,.35);color:#c9ffd4;">Soft &amp; premium</span><span style="font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:9px 14px;border-radius:999px;border:1px solid rgba(157,255,176,.35);color:#c9ffd4;">Handmade with love</span></div>
+          <div style="display:flex;align-items:center;gap:18px;margin-top:6px;flex-wrap:wrap;">
+            <button onClick="{{ toGlowDesigns }}" style="all:unset;cursor:pointer;background:#7dffa8;color:#07090e;font-weight:700;font-size:15.5px;padding:15px 26px;border-radius:999px;box-shadow:0 0 28px rgba(125,255,168,.45);">Shop the glow</button>
+            <span style="font-size:15px;color:#ffe2b0;font-weight:700;">From Rs. 2,000</span>
+          </div>
+        </div>
+        <div style="border-radius:26px;overflow:hidden;border:1px solid rgba(240,190,110,.3);box-shadow:0 0 70px rgba(125,255,168,.16);aspect-ratio:1145/905;max-height:calc(100vh - 220px);justify-self:center;width:100%;max-width:calc((100vh - 220px) * 1.265);"><img src="assets/shop/glow-hero.jpg" alt="Cat and dog wearing glowing crochet collars" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+      </div>
+    </div>
+    <div id="glow-designs" style="max-width:1200px;margin:0 auto;padding:16px 24px 80px;display:flex;flex-direction:column;gap:80px;">
+      <div style="display:flex;flex-direction:column;gap:26px;">
+        <div><h2 style="font-family:var(--disp);font-size:clamp(30px,3.4vw,40px);font-weight:700;margin:0;color:#fff3dd;">The designs</h2><p style="font-size:15px;color:#a9b3a6;margin:8px 0 0;">Tap a design to choose size &amp; colour.</p></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:22px;">
+          <sc-for list="{{ glowProducts }}" as="g" hint-placeholder-count="9">
+            <button onClick="{{ g.onClick }}" style="all:unset;cursor:pointer;display:flex;flex-direction:column;background:#0e1310;border:1px solid rgba(240,194,122,.22);border-radius:20px;overflow:hidden;transition:transform .2s, box-shadow .2s;" style-hover="transform:translateY(-4px);box-shadow:0 0 40px rgba(125,255,168,.2);border-color:rgba(125,255,168,.5);">
+              <div style="aspect-ratio:428/296;background:#000;"><img src="{{ g.img }}" alt="{{ g.name }}" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+              <div style="padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;">
+                <div style="font-family:var(--disp);font-weight:700;font-size:20px;line-height:1.25;color:#fff3dd;"><span style="font-family:var(--body, inherit);font-size:13px;color:#7dffa8;letter-spacing:.1em;margin-right:10px;">{{ g.num }}</span>{{ g.name }}</div>
+                <div style="font-size:13.5px;line-height:1.5;color:#a9a294;">{{ g.material }}</div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:2px;"><div style="display:flex;gap:6px;"><span title="White" style="width:16px;height:16px;border-radius:50%;background:#f4efe6;border:1.5px solid rgba(255,255,255,.35);"></span><span title="Blue" style="width:16px;height:16px;border-radius:50%;background:#9cc8ef;border:1.5px solid rgba(255,255,255,.35);"></span><span title="Pink" style="width:16px;height:16px;border-radius:50%;background:#f5a8c4;border:1.5px solid rgba(255,255,255,.35);"></span><span title="Yellow" style="width:16px;height:16px;border-radius:50%;background:#eef27a;border:1.5px solid rgba(255,255,255,.35);"></span><span title="Green" style="width:16px;height:16px;border-radius:50%;background:#a6e6a0;border:1.5px solid rgba(255,255,255,.35);"></span></div><span style="font-weight:700;font-size:16px;color:#ffe2b0;">{{ g.priceLabel }}</span></div>
+              </div>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:40px;align-items:center;">
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <span style="font-size:12px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:#7dffa8;">The yarn</span>
+          <h2 style="font-family:var(--disp);font-size:clamp(30px,3.4vw,40px);line-height:1.08;font-weight:700;margin:0;color:#fff3dd;text-wrap:balance;">Five colours by day, one soft glow by night.</h2>
+          <p style="font-size:16px;line-height:1.6;color:#b8b0a2;margin:0;max-width:420px;">Pick white, blue, pink, yellow or green for any design. Pastel in daylight — after dark, every shade glows green.</p>
+        </div>
+        <div style="border-radius:22px;overflow:hidden;border:1px solid rgba(157,255,176,.22);aspect-ratio:1536/1024;"><img src="assets/shop/glow/yarn-hero.jpg" alt="Glow yarn in five colours, by day and in the dark" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:28px;">
+        <h2 style="font-family:var(--disp);font-size:30px;font-weight:700;margin:0;color:#fff3dd;grid-column:1/-1;">How the glow works</h2>
+        <div style="display:flex;gap:16px;align-items:flex-start;"><span style="font-family:var(--disp);font-weight:700;font-size:30px;color:#7dffa8;text-shadow:0 0 16px rgba(125,255,168,.6);line-height:1;">01</span><div><div style="font-family:var(--disp);font-weight:700;font-size:18px;color:#fff3dd;">Charge it</div><div style="font-size:14.5px;line-height:1.55;color:#b8b0a2;margin-top:4px;">Leave the collar in daylight or under a lamp for 10–15 minutes.</div></div></div><div style="display:flex;gap:16px;align-items:flex-start;"><span style="font-family:var(--disp);font-weight:700;font-size:30px;color:#7dffa8;text-shadow:0 0 16px rgba(125,255,168,.6);line-height:1;">02</span><div><div style="font-family:var(--disp);font-weight:700;font-size:18px;color:#fff3dd;">Head out</div><div style="font-size:14.5px;line-height:1.55;color:#b8b0a2;margin-top:4px;">After dark the yarn glows a soft green, so your pet is easy to spot.</div></div></div><div style="display:flex;gap:16px;align-items:flex-start;"><span style="font-family:var(--disp);font-weight:700;font-size:30px;color:#7dffa8;text-shadow:0 0 16px rgba(125,255,168,.6);line-height:1;">03</span><div><div style="font-family:var(--disp);font-weight:700;font-size:18px;color:#fff3dd;">Recharge anytime</div><div style="font-size:14.5px;line-height:1.55;color:#b8b0a2;margin-top:4px;">Every bit of light tops it up again — no batteries, nothing to switch on.</div></div></div>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+  <sc-if value="{{ pg.home }}" hint-placeholder-val="{{ true }}">
+
+
+  <div style="max-width:1200px;margin:8px auto 0;padding:0 24px;">
+    <div style="background:var(--paper);border:1px solid var(--line);border-radius:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));overflow:hidden;">
+      <sc-for list="{{ trust }}" as="t" hint-placeholder-count="4">
+        <div style="display:flex;align-items:center;gap:12px;padding:18px 22px;border-right:1px solid var(--line);">
+          <span style="color:{{ t.color }};flex:none;display:grid;place-items:center;" innerHTML="{{ t.icon }}"></span>
+          <div><div style="font-weight:700;font-size:14px;color:var(--navy);">{{ t.title }}</div><div style="font-size:12.5px;color:var(--muted);">{{ t.sub }}</div></div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  </sc-if>
+
+  <sc-if value="{{ pg.home }}" hint-placeholder-val="{{ true }}">
+  <section style="max-width:1200px;margin:0 auto;padding:64px 24px 8px;">
+    <div style="margin-bottom:22px;">
+      <h2 style="font-family:var(--disp);font-size:clamp(28px,6vw,38px);font-weight:700;letter-spacing:-.01em;margin:0;color:var(--navy);">Shop by craft</h2>
+      <p style="color:var(--muted);font-size:16px;margin:4px 0 0;">Hand-crocheted yarn or hand-stitched cloth — every piece can be made in your colours.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;">
+      <sc-for list="{{ craftCards }}" as="c" hint-placeholder-count="3">
+        <button onClick="{{ c.onClick }}" style="text-align:left;padding:0;border:1px solid {{ c.border }};background:{{ c.bg }};border-radius:22px;overflow:hidden;cursor:pointer;transition:transform .15s,box-shadow .15s;" style-hover="box-shadow:0 16px 34px -16px rgba(20,36,63,.4);transform:translateY(-3px);">
+          <div style="aspect-ratio:16/11;display:grid;place-items:center;background:{{ c.tileBg }};">
+            <div style="width:70%;aspect-ratio:1/1;filter:{{ c.shadow }};">
+              <image-slot id="{{ c.slot }}" shape="rect" src="{{ c.img }}" placeholder="{{ c.label }}"></image-slot>
+            </div>
+          </div>
+          <div style="padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;">
+            <div><div style="font-family:var(--disp);font-weight:700;font-size:22px;color:{{ c.fg }};">{{ c.label }}</div><div style="font-size:13px;color:{{ c.sub }};">{{ c.desc }}</div></div>
+            <span style="font-weight:700;font-size:12.5px;color:{{ c.fg }};border:1.5px solid {{ c.chip }};padding:6px 12px;border-radius:20px;white-space:nowrap;">{{ c.countLabel }}</span>
+          </div>
+        </button>
+      </sc-for>
+    </div>
+  </section>
+  </sc-if>
+
+  <sc-if value="{{ pg.shop }}" hint-placeholder-val="{{ false }}">
+  <section id="shop" style="max-width:1200px;margin:0 auto;padding:56px 24px;">
+    <div style="display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+      <div>
+        <h2 style="font-family:var(--disp);font-size:clamp(28px,6vw,38px);font-weight:700;letter-spacing:-.01em;margin:0;color:var(--navy);">The catalogue</h2>
+        <p style="color:var(--muted);font-size:16px;margin:4px 0 0;">{{ resultLabel }}</p>
+      </div>
+      <div style="display:flex;gap:6px;background:var(--paper);border:1px solid var(--line);padding:6px;border-radius:14px;flex-wrap:nowrap;max-width:100%;overflow-x:auto;">
+        <sc-for list="{{ matTabs }}" as="tab" hint-placeholder-count="3">
+          <button onClick="{{ tab.onClick }}" style="white-space:nowrap;flex:none;border:none;cursor:pointer;font-weight:700;font-size:13.5px;padding:9px 16px;border-radius:9px;background:{{ tab.bg }};color:{{ tab.color }};box-shadow:{{ tab.shadow }};transition:all .12s;">{{ tab.label }} <span style="opacity:.6;font-weight:600;">{{ tab.count }}</span></button>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:18px;">
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <sc-for list="{{ typeChips }}" as="t" hint-placeholder-count="6">
+          <button onClick="{{ t.onClick }}" style="cursor:pointer;font-weight:600;font-size:13px;padding:8px 14px;border-radius:20px;border:1.5px solid {{ t.border }};background:{{ t.bg }};color:{{ t.color }};">{{ t.label }} · {{ t.count }}</button>
+        </sc-for>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <input value="{{ q }}" onChange="{{ onQ }}" placeholder="Search colours, flowers, bows…" style="width:240px;max-width:100%;padding:10px 14px;border-radius:11px;border:1.5px solid var(--line);background:var(--paper);font-size:13.5px;color:var(--navy);outline:none;">
+        <select value="{{ sort }}" onChange="{{ onSort }}" style="padding:10px 12px;border-radius:11px;border:1.5px solid var(--line);background:var(--paper);font-size:13.5px;font-weight:600;color:var(--navy);cursor:pointer;">
+          <option value="featured">Featured</option>
+          <option value="low">Price: low to high</option>
+          <option value="high">Price: high to low</option>
+        </select>
+      </div>
+    </div>
+    <sc-for list="{{ groups }}" as="g" hint-placeholder-count="2">
+      <div style="margin-top:38px;">
+        <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid var(--line);">
+          <span style="font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:{{ g.eyebrowColor }};">{{ g.matLabel }}</span>
+          <h3 style="font-family:var(--disp);font-size:27px;font-weight:700;margin:0;color:var(--navy);">{{ g.label }}</h3>
+          <span style="font-size:13.5px;color:var(--muted);">{{ g.countLabel }}</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;">
+          <sc-for list="{{ g.items }}" as="p" hint-placeholder-count="4">
+            <div style="background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s;" style-hover="box-shadow:0 16px 32px -16px rgba(20,36,63,.32);transform:translateY(-3px);">
+              <button onClick="{{ p.onView }}" style="all:unset;cursor:pointer;position:relative;aspect-ratio:1/1;background:#f3ebdf;display:grid;place-items:center;">
+                <div style="width:{{ p.frameW }};aspect-ratio:1/1;border-radius:{{ p.frameR }};border:{{ p.frameB }};overflow:{{ p.frameO }};filter:drop-shadow(0 14px 12px rgba(20,36,63,.2));">
+                  <image-slot id="{{ p.slot }}" shape="rect" src="{{ p.img }}" placeholder="{{ p.ph }}"></image-slot>
+                </div>
+                <span style="position:absolute;top:12px;left:12px;background:{{ p.badgeBg }};color:{{ p.badgeColor }};font-weight:700;font-size:11px;letter-spacing:.03em;padding:5px 11px;border-radius:20px;">{{ p.badge }}</span>
+                <sc-if value="{{ p.glow }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;top:12px;right:12px;background:#0f1a2e;color:#c8ff7a;font-weight:700;font-size:11px;padding:5px 10px;border-radius:20px;box-shadow:0 0 14px rgba(200,255,122,.55);">Glows</span></sc-if>
+              </button>
+              <div style="padding:16px 17px 17px;display:flex;flex-direction:column;flex:1;">
+                <span style="font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;">{{ p.matLabel }}</span>
+                <button onClick="{{ p.onView }}" style="all:unset;cursor:pointer;font-family:var(--disp);font-weight:700;font-size:19px;line-height:1.2;color:var(--navy);margin-top:3px;">{{ p.name }}</button>
+                <div style="font-size:13px;color:var(--muted);margin:4px 0 0;line-height:1.45;flex:1;text-wrap:pretty;">{{ p.material }}</div>
+                <div style="display:flex;align-items:end;justify-content:space-between;gap:10px;margin-top:14px;">
+                  <div>
+                    <div style="font-family:var(--disp);font-weight:700;font-size:20px;color:var(--navy);line-height:1;">{{ p.priceLabel }}</div>
+                    <div style="font-size:11.5px;color:var(--teal);font-weight:700;margin-top:4px;">or custom colours {{ p.customLabel }}</div>
+                  </div>
+                  <button onClick="{{ p.onView }}" style="background:var(--navy);color:#fff;border:none;font-weight:700;font-size:13px;padding:10px 14px;border-radius:10px;cursor:pointer;flex:none;" style-hover="background:var(--teal);">Choose</button>
+                </div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+    <sc-if value="{{ glowEmpty }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-top:34px;background:#0f1a2e;border-radius:22px;padding:44px 28px;text-align:center;color:#e9f2ff;">
+        <div style="font-family:var(--disp);font-size:28px;font-weight:700;color:#c8ff7a;text-shadow:0 0 18px rgba(200,255,122,.6);">Glow in the Dark</div>
+        <p style="max-width:440px;margin:8px auto 0;font-size:15px;line-height:1.6;color:#c9d6ea;">Crochet pieces in glow yarn that light up on night walks. Message us to order any crochet design in glow yarn.</p>
+        <a href="{{ waHref }}" target="_blank" style="display:inline-block;margin-top:18px;background:#c8ff7a;color:#0f1a2e;font-weight:700;font-size:14px;padding:12px 20px;border-radius:12px;">Ask on WhatsApp</a>
+      </div>
+    </sc-if>
+    <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-top:34px;background:var(--paper);border:1px dashed var(--line);border-radius:20px;padding:40px;text-align:center;color:var(--muted);">
+        Nothing matches “{{ q }}”. <button onClick="{{ clearFilters }}" style="border:none;background:none;color:var(--teal);font-weight:700;cursor:pointer;font-size:15px;">Clear filters</button>
+      </div>
+    </sc-if>
+  </section>
+  </sc-if>
+
+  <sc-if value="{{ pg.custom }}" hint-placeholder-val="{{ false }}">
+  <section id="custom" style="background:var(--navy);color:#f3f7fb;">
+    <div style="max-width:1200px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center;">
+      <div style="border-radius:24px;overflow:hidden;aspect-ratio:1/1;background:#1d3050;border:5px solid rgba(255,255,255,.1);">
+        <image-slot id="wt-custom-paw" shape="rect" src="assets/shop/v3/pawtie.jpg" placeholder="Paw charm"></image-slot>
+      </div>
+      <div>
+        <span style="display:inline-block;white-space:nowrap;background:var(--orange);color:#4a2b05;font-weight:800;font-size:12px;letter-spacing:.05em;padding:6px 13px;border-radius:20px;">HAND-CROCHETED</span>
+        <h2 style="font-family:var(--disp);font-size:clamp(34px,6vw,46px);font-weight:700;letter-spacing:-.01em;margin:18px 0 0;line-height:1.05;">Little <span style="color:var(--teal);">paw</span> charms.</h2>
+        <p style="font-size:17px;line-height:1.6;color:rgba(243,247,251,.82);margin:16px 0 0;max-width:470px;">Every charm is crocheted by hand, stitch by stitch, then knotted onto a soft-lined collar band. No hard edges, nothing to scratch — just a tiny paw that swings when they walk.</p>
+        <ul style="list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px;">
+          <sc-for list="{{ customPerks }}" as="k" hint-placeholder-count="4">
+            <li style="display:flex;align-items:center;gap:11px;font-weight:600;font-size:15px;">
+              <span style="width:26px;height:26px;border-radius:8px;background:rgba(43,184,182,.24);display:grid;place-items:center;color:var(--teal);flex:none;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></span>
+              {{ k }}
+            </li>
+          </sc-for>
+        </ul>
+        <button onClick="{{ openCustom }}" style="margin-top:30px;background:var(--teal);color:#fff;border:none;font-weight:700;font-size:15px;padding:15px 28px;border-radius:13px;cursor:pointer;box-shadow:0 4px 0 #1e9a98;" style-hover="background:#25a5a3;">Shop charm collars →</button>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <sc-if value="{{ pg.story }}" hint-placeholder-val="{{ false }}">
+  <section id="story" style="padding:clamp(20px,3vw,36px) 20px clamp(40px,6vw,72px);">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(28px,4vw,48px);">
+      <div style="border-radius:26px;overflow:hidden;border:6px solid var(--paper);box-shadow:0 24px 48px -24px rgba(20,36,63,.35);background:#f3ebdf;display:flex;justify-content:center;">
+        <img src="assets/brand/our-story-web.jpg" alt="The WaggleTails team — our founder, social media lead and the women artisans who crochet and stitch every piece" style="display:block;width:100%;height:auto;max-height:calc(100vh - 170px);object-fit:contain;">
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:44px;align-items:start;">
+    <div>
+      <span style="display:inline-block;background:var(--coral-050);color:#c9354a;font-weight:700;font-size:12.5px;padding:7px 14px;border-radius:20px;">OUR STORY</span>
+      <h2 style="font-family:var(--disp);font-size:clamp(30px,6.5vw,42px);font-weight:700;letter-spacing:-.01em;margin:18px 0 0;color:var(--navy);line-height:1.08;">Made for the pets we couldn't shop for.</h2>
+      <p style="font-size:17px;line-height:1.65;color:var(--muted);margin:18px 0 0;">WaggleTails began because everything on the shelf was stiff, scratchy or built for someone else's pet. So we started making our own — soft-lined bands, rounded edges, no rough seams against the skin.</p>
+      <p style="font-size:17px;line-height:1.65;color:var(--muted);margin:14px 0 0;">But it's about more than pets. Every collar is crocheted or stitched by skilled women working from their own homes across Pakistan — keeping traditional handcraft alive and turning it into a steady, dignified income on their own schedule.</p>
+      <p style="font-size:17px;line-height:1.65;color:var(--muted);margin:14px 0 0;">When you buy a WaggleTails piece, your pet gets something soft and one-of-a-kind, and a maker at home gets paid fairly for her craft.</p>
+      <div style="display:flex;gap:14px;margin-top:26px;flex-wrap:wrap;">
+        <div style="background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 18px;"><div style="font-family:var(--disp);font-weight:700;font-size:20px;color:var(--teal);">Small batch</div><div style="font-size:13px;color:var(--muted);">made to order</div></div>
+        <div style="background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 18px;"><div style="font-family:var(--disp);font-weight:700;font-size:20px;color:var(--coral);">Skin-first</div><div style="font-size:13px;color:var(--muted);">soft linings, no scratch</div></div>
+        <div style="background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 18px;"><div style="font-family:var(--disp);font-weight:700;font-size:20px;color:var(--navy);">Women-made</div><div style="font-size:13px;color:var(--muted);">by home-based artisans</div></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="font-family:var(--disp);font-weight:700;font-size:24px;color:var(--navy);">The people behind WaggleTails</div>
+        <div style="display:flex;gap:16px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px;">
+          <img src="assets/brand/anas.jpg" alt="Anas Tanveer Siddiqui" style="width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:50% 25%;flex:none;border:3px solid #fff;box-shadow:0 6px 14px -6px rgba(20,36,63,.35);">
+          <div style="min-width:0;"><div style="font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);">Founder</div><div style="font-family:var(--disp);font-weight:700;font-size:20px;color:var(--navy);margin-top:2px;">Anas Tanveer Siddiqui</div><div style="font-size:13.5px;line-height:1.45;color:var(--muted);margin-top:4px;">Started WaggleTails to make soft, skin-safe accessories for pets — and steady work for women artisans at home.</div></div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px;">
+          <img src="assets/brand/aimal.jpg" alt="Aimal Tanveer Siddiqui" style="width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:55% 30%;flex:none;border:3px solid #fff;box-shadow:0 6px 14px -6px rgba(20,36,63,.35);">
+          <div style="min-width:0;"><div style="font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);">Social media &amp; management</div><div style="font-family:var(--disp);font-weight:700;font-size:20px;color:var(--navy);margin-top:2px;">Aimal Tanveer Siddiqui</div><div style="font-size:13.5px;line-height:1.45;color:var(--muted);margin-top:4px;">Runs our Instagram, customer chats and orders — the voice you talk to on WhatsApp and DMs.</div></div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px;">
+          <img src="assets/shop/v3/rosegarden.jpg" alt="Our women artisans" style="width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:50% 60%;flex:none;border:3px solid #fff;box-shadow:0 6px 14px -6px rgba(20,36,63,.35);">
+          <div style="min-width:0;"><div style="font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);">The makers</div><div style="font-family:var(--disp);font-weight:700;font-size:20px;color:var(--navy);margin-top:2px;">Our women artisans</div><div style="font-size:13.5px;line-height:1.45;color:var(--muted);margin-top:4px;">Skilled crocheters and stitchers working from their own homes across Pakistan, paid fairly for every piece.</div></div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <sc-if value="{{ pg.reviewsOn }}" hint-placeholder-val="{{ true }}">
+  <section id="reviews" style="background:#fff0f2;border-top:3px solid var(--coral);border-bottom:1px solid var(--line);">
+    <div style="max-width:1200px;margin:0 auto;padding:36px 24px 44px;">
+      <div style="text-align:center;margin-bottom:12px;"><span style="display:inline-block;background:var(--coral);color:#fff;font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:7px 14px;border-radius:20px;">★ Customer reviews</span></div>
+      <h2 style="font-family:var(--disp);font-size:clamp(26px,4vw,34px);font-weight:700;margin:0 0 6px;color:var(--navy);text-align:center;">Loved by pet parents</h2>
+      <p style="text-align:center;color:var(--muted);font-size:15px;margin:0 0 24px;">Real messages from our customers on Instagram.</p>
+      <div style="columns:4 230px;column-gap:16px;">
+        <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+          <div style="background:var(--cream);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;break-inside:avoid;margin:0 0 16px;">
+            <sc-if value="{{ r.hasPhoto }}" hint-placeholder-val="{{ false }}"><img src="{{ r.photo }}" alt="{{ r.name }}'s pet wearing WaggleTails" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 35%;display:block;"></sc-if>
+            <div style="padding:16px 18px 18px;">
+            <div style="color:var(--orange);font-size:15px;letter-spacing:2px;">★★★★★</div>
+            <p style="font-size:14px;line-height:1.55;color:var(--navy);margin:8px 0 12px;">"{{ r.text }}"</p>
+            <div style="display:flex;align-items:center;gap:11px;">
+              <span style="width:38px;height:38px;border-radius:50%;background:{{ r.color }};color:#fff;font-weight:800;display:grid;place-items:center;font-size:15px;">{{ r.initial }}</span>
+              <div><div style="font-weight:700;font-size:14px;">{{ r.name }}</div><div style="font-size:12.5px;color:var(--muted);">{{ r.city }} · via Instagram</div></div>
+            </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <sc-if value="{{ pg.contact }}" hint-placeholder-val="{{ false }}">
+  <section id="contact" style="max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,72px) 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:40px;align-items:start;">
+    <div>
+      <h2 style="font-family:var(--disp);font-size:clamp(28px,6vw,38px);font-weight:700;margin:0;color:var(--navy);">Say salaam</h2>
+      <p style="font-size:16px;line-height:1.6;color:var(--muted);margin:10px 0 26px;max-width:420px;">Questions about sizing, custom orders or your delivery? We're quickest on WhatsApp and Instagram DMs.</p>
+      <div style="display:grid;gap:12px;">
+        <a href="{{ waHref }}" target="_blank" style="display:flex;align-items:center;gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;" style-hover="border-color:var(--teal);">
+          <span style="width:44px;height:44px;border-radius:12px;background:#25d366;display:grid;place-items:center;color:#fff;flex:none;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.2-4.6-.1-.2-1.2-1.6-1.2-3 0-1.5.7-2.2 1-2.5.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6c-.2.2-.4.4-.2.7.2.4.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l.7-.9c.2-.3.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.8-.1 1.5z"/></svg></span>
+          <div><div style="font-weight:700;font-size:15px;color:var(--navy);">WhatsApp</div><div style="font-size:13.5px;color:var(--muted);">{{ waLabel }}</div></div>
+        </a>
+        <a href="{{ instaUrl }}" target="_blank" style="display:flex;align-items:center;gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;" style-hover="border-color:var(--coral);">
+          <span style="width:44px;height:44px;border-radius:12px;background:linear-gradient(45deg,#f09433,#dc2743 45%,#833ab4);display:grid;place-items:center;color:#fff;flex:none;"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></span>
+          <div><div style="font-weight:700;font-size:15px;color:var(--navy);">Instagram</div><div style="font-size:13.5px;color:var(--muted);">{{ instaLabel }}</div></div>
+        </a>
+        <div style="display:flex;align-items:center;gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;">
+          <span style="width:44px;height:44px;border-radius:12px;background:var(--orange-050);display:grid;place-items:center;color:var(--orange);flex:none;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><div style="font-weight:700;font-size:15px;color:var(--navy);">Studio</div><div style="font-size:13.5px;color:var(--muted);">Pakistan · Mon–Sat, 11am–7pm</div></div>
+        </div>
+      </div>
+    </div>
+    <div style="background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:28px;">
+      <h3 style="font-family:var(--disp);font-size:22px;font-weight:700;margin:0 0 3px;color:var(--navy);">Send us a message</h3>
+      <p style="font-size:13.5px;color:var(--muted);margin:0 0 20px;">We reply within a day, promise.</p>
+      <sc-if value="{{ msgSent }}" hint-placeholder-val="{{ false }}">
+        <div style="background:var(--teal-050);border:1px solid var(--teal);border-radius:12px;padding:16px;color:#12807e;font-weight:600;font-size:14px;">Shukriya! Your message is on its way — we'll be in touch soon.</div>
+      </sc-if>
+      <sc-if value="{{ msgNotSent }}" hint-placeholder-val="{{ true }}">
+        <div style="display:grid;gap:12px;">
+          <input value="{{ cName }}" onChange="{{ onCName }}" placeholder="Your name" style="width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:14px;outline:none;">
+          <input value="{{ cPhone }}" onChange="{{ onCPhone }}" placeholder="Phone / WhatsApp" style="width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:14px;outline:none;">
+          <textarea value="{{ cMsg }}" onChange="{{ onCMsg }}" rows="4" placeholder="How can we help?" style="width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:14px;outline:none;resize:vertical;"></textarea>
+          <button onClick="{{ sendMsg }}" style="background:var(--navy);color:#fff;border:none;font-weight:700;font-size:15px;padding:14px;border-radius:11px;cursor:pointer;" style-hover="background:var(--teal);">Send message</button>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+  </sc-if>
+
+  <sc-if value="{{ quickOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="max-width:1200px;margin:0 auto;padding:22px 20px 80px;display:flex;flex-direction:column;gap:18px;">
+      <button onClick="{{ closeQuick }}" style="all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14.5px;color:var(--navy);align-self:flex-start;padding:6px 0;white-space:nowrap;">← {{ backLabel }}</button>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:36px;align-items:start;">
+        <div style="background:#f3ebdf;border-radius:24px;display:flex;flex-direction:column;align-items:center;gap:18px;padding:clamp(18px,3vw,32px);position:sticky;top:96px;">
+          <div style="width:100%;max-width:520px;aspect-ratio:{{ quickAspect }};filter:drop-shadow(0 16px 14px rgba(20,36,63,.22));">
+            <sc-if value="{{ quickShowCanvas }}" hint-placeholder-val="{{ false }}"><div style="position:relative;width:100%;height:100%;background:#fff;border-radius:16px;border:5px solid #fff;box-shadow:0 16px 30px -16px rgba(20,36,63,.4);"><span style="position:absolute;top:10px;left:10px;z-index:1;background:var(--navy);color:#fff;font-size:11px;font-weight:700;letter-spacing:.04em;padding:5px 10px;border-radius:20px;white-space:nowrap;">LIVE COLOUR PREVIEW</span><canvas data-wt-recolor="1" ref="{{ recolorRef }}" width="440" height="440" style="width:100%;height:100%;display:block;"></canvas></div></sc-if>
+            <sc-if value="{{ quickShowPhoto }}" hint-placeholder-val="{{ true }}"><div style="width:100%;height:100%;border-radius:16px;overflow:hidden;border:5px solid #fff;"><image-slot id="{{ quickSlot }}" shape="rect" src="{{ quickPhotoSrc }}" placeholder="{{ quickName }}"></image-slot></div></sc-if>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;width:100%;max-width:520px;">
+            <div style="display:flex;gap:8px;flex:none;">
+            </div>
+            <div style="font-size:12px;color:var(--muted);line-height:1.45;">{{ previewNote }}</div>
+          </div>
+        </div>
+        <div style="padding:4px 0;display:flex;flex-direction:column;">
+          <div style="display:flex;justify-content:space-between;align-items:start;gap:12px;">
+            <div>
+              <span style="font-size:11.5px;font-weight:700;color:var(--teal);letter-spacing:.04em;">{{ quickMatLabel }} · {{ quickBadge }}</span>
+              <h1 style="font-family:var(--disp);font-size:clamp(30px,4vw,40px);font-weight:700;margin:3px 0 0;color:var(--navy);line-height:1.15;">{{ quickName }}</h1>
+            </div>
+          </div>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.55;margin:10px 0 0;">{{ quickMaterial }}</p>
+          <sc-if value="{{ quickIsGlow }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:18px;">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;font-size:13px;margin-bottom:10px;"><span style="font-weight:700;color:var(--navy);">Glow yarn colour</span><span style="color:var(--muted);">{{ yarnLabel }}</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:10px;">
+              <sc-for list="{{ yarnOptions }}" as="y" hint-placeholder-count="5">
+                <button onClick="{{ y.onClick }}" style="display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;padding:8px 8px 7px;border-radius:12px;border:1.5px solid {{ y.border }};background:{{ y.bg }};min-width:58px;">
+                  <span style="width:30px;height:30px;border-radius:50%;background:{{ y.hex }};border:1px solid rgba(0,0,0,.12);"></span>
+                  <span style="font-size:11.5px;font-weight:700;color:var(--navy);">{{ y.name }}</span>
+                </button>
+              </sc-for>
+            </div>
+            <div style="font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5;">Pastel by day — every colour glows green after dark.</div>
+          </div>
+          </sc-if>
+          <sc-if value="{{ quickNotGlow }}" hint-placeholder-val="{{ true }}">
+          <div style="margin-top:18px;">
+            <div style="font-weight:700;font-size:13px;margin-bottom:8px;">Design</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+              <sc-for list="{{ designOptions }}" as="o" hint-placeholder-count="2">
+                <button onClick="{{ o.onClick }}" style="text-align:left;cursor:pointer;padding:11px 12px;border-radius:12px;border:1.5px solid {{ o.border }};background:{{ o.bg }};">
+                  <div style="font-weight:700;font-size:13.5px;color:var(--navy);">{{ o.title }}</div>
+                  <div style="font-size:12px;color:var(--muted);margin-top:2px;">{{ o.sub }}</div>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+          </sc-if>
+          <sc-if value="{{ quickCustom }}" hint-placeholder-val="{{ false }}">
+            <div style="margin-top:4px;">
+              <sc-for list="{{ colorParts }}" as="cp" hint-placeholder-count="3">
+                <div style="margin-top:14px;">
+                  <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13px;"><span style="display:flex;align-items:center;gap:7px;font-weight:700;color:var(--navy);"><span title="Original colour" style="width:14px;height:14px;border-radius:4px;background:{{ cp.base }};border:1px solid rgba(0,0,0,.12);"></span>{{ cp.label }}</span><span style="display:flex;align-items:center;gap:8px;color:var(--muted);">{{ cp.name }}</span></div>
+                  <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:8px;">
+                    <sc-for list="{{ cp.swatches }}" as="sw" hint-placeholder-count="12">
+                      <button onClick="{{ sw.onClick }}" title="{{ sw.name }}" style="width:26px;height:26px;border-radius:50%;cursor:pointer;padding:0;background:{{ sw.hex }};border:2px solid {{ sw.ring }};box-shadow:{{ sw.halo }};"></button>
+                    </sc-for>
+                  </div>
+                </div>
+              </sc-for>
+              <div style="margin-top:14px;background:#fdeedd;color:#7a4a10;border-radius:10px;padding:10px 12px;font-size:12.5px;line-height:1.5;font-weight:600;">Custom pieces take 2–7 days to make, depending on the customisation.</div>
+            </div>
+          </sc-if>
+          <div style="margin-top:18px;">
+            <div style="font-weight:700;font-size:13px;margin-bottom:8px;">Size</div>
+            <div style="display:flex;gap:8px;">
+              <sc-for list="{{ quickSizes }}" as="sz" hint-placeholder-count="4">
+                <button onClick="{{ sz.onClick }}" style="width:48px;height:40px;border-radius:10px;font-weight:700;font-size:13.5px;cursor:pointer;border:1.5px solid {{ sz.border }};background:{{ sz.bg }};color:{{ sz.color }};">{{ sz.label }}</button>
+              </sc-for>
+            </div>
+            <div style="font-size:12px;color:var(--muted);margin-top:7px;">XS &lt;25cm · S 25–32 · M 32–42 · L 42–55</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:20px;">
+            <div style="display:flex;align-items:center;border:1.5px solid var(--line);border-radius:10px;overflow:hidden;">
+              <button onClick="{{ quickQtyDec }}" style="width:38px;height:40px;border:none;background:var(--paper);font-size:18px;cursor:pointer;color:var(--navy);">−</button>
+              <span style="width:38px;text-align:center;font-weight:700;">{{ quickQty }}</span>
+              <button onClick="{{ quickQtyInc }}" style="width:38px;height:40px;border:none;background:var(--paper);font-size:18px;cursor:pointer;color:var(--navy);">+</button>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-family:var(--disp);font-weight:700;font-size:24px;color:var(--navy);line-height:1;">{{ quickTotalLabel }}</div>
+              <sc-if value="{{ quickCustom }}" hint-placeholder-val="{{ false }}"><div style="font-size:11.5px;color:var(--teal);font-weight:700;margin-top:3px;">includes Rs. 300 custom colours</div></sc-if>
+            </div>
+          </div>
+          <button onClick="{{ addToCart }}" style="margin-top:16px;background:var(--coral);color:#fff;border:none;font-weight:700;font-size:15px;padding:15px;border-radius:12px;cursor:pointer;box-shadow:0 4px 0 #d43e52;" style-hover="background:#e8485c;">{{ addLabel }}</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ checkoutOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="max-width:1040px;margin:0 auto;padding:clamp(14px,3vw,28px) 16px 64px;">
+      <div style="background:var(--cream);border:1px solid var(--line);border-radius:22px;width:100%;overflow:hidden;box-shadow:0 20px 50px -30px rgba(20,36,63,.35);">
+        <sc-if value="{{ orderPlaced }}" hint-placeholder-val="{{ false }}">
+          <div style="padding:56px 40px;text-align:center;">
+            <div style="width:76px;height:76px;border-radius:50%;background:var(--teal-050);display:grid;place-items:center;margin:0 auto;color:var(--teal);"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg></div>
+            <h2 style="font-family:var(--disp);font-size:34px;font-weight:700;color:var(--navy);margin:20px 0 8px;">Shukriya! Order placed</h2>
+            <p style="font-size:16px;color:var(--muted);max-width:450px;margin:0 auto;">{{ placedMsg }}</p>
+            <sc-if value="{{ placedBank }}" hint-placeholder-val="{{ false }}">
+              <div style="max-width:520px;margin:26px auto 0;text-align:left;background:#fff;border:1.5px solid var(--teal);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:14px;">
+                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><span style="background:#fff3e6;color:#a85c10;font-weight:800;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:20px;">Payment pending</span><span style="font-weight:700;color:var(--navy);">Transfer {{ placedTotalLabel }}</span></div>
+                <sc-for list="{{ bankRows }}" as="b" hint-placeholder-count="4">
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding-bottom:8px;">
+                    <div style="min-width:0;"><div style="font-size:11.5px;color:var(--muted);">{{ b.label }}</div><div style="font-weight:700;font-size:14.5px;color:var(--navy);word-break:break-all;">{{ b.value }}</div></div>
+                    <sc-if value="{{ b.canCopy }}" hint-placeholder-val="{{ false }}"><button onClick="{{ b.onCopy }}" style="flex:none;border:1.5px solid var(--line);background:var(--cream);border-radius:9px;padding:6px 11px;font-weight:700;font-size:12px;cursor:pointer;color:var(--navy);">{{ b.copyLabel }}</button></sc-if>
+                  </div>
+                </sc-for>
+                <div style="font-size:14px;line-height:1.55;color:var(--navy);"><b>Next step:</b> send the payment screenshot with order <b>#{{ orderNo }}</b>. We'll confirm on WhatsApp and start making your order.</div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px;">
+                  <a href="{{ proofWaHref }}" onClick="{{ openProofWa }}" style="display:flex;align-items:center;justify-content:center;background:#25d366;color:#fff;font-weight:700;font-size:14.5px;padding:13px 16px;border-radius:12px;text-decoration:none;">Send screenshot on WhatsApp</a>
+                  <a href="{{ igDmHref }}" onClick="{{ openIgDm }}" style="display:flex;align-items:center;justify-content:center;background:#fff;border:1.5px solid var(--coral);color:var(--coral);font-weight:700;font-size:14.5px;padding:12px 16px;border-radius:12px;text-decoration:none;">DM on Instagram</a>
+                </div>
+              </div>
+            </sc-if>
+            <button onClick="{{ continueShopping }}" style="margin-top:28px;background:var(--navy);color:#fff;border:none;font-weight:700;font-size:15px;padding:14px 28px;border-radius:12px;cursor:pointer;">Continue shopping</button>
+          </div>
+        </sc-if>
+        <sc-if value="{{ checkoutForm }}" hint-placeholder-val="{{ true }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));align-items:start;">
+            <div style="padding:clamp(18px,2.4vh,28px) clamp(18px,3vw,32px);">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <h2 style="font-family:var(--disp);font-size:27px;font-weight:700;color:var(--navy);margin:0;">Checkout</h2>
+                <button onClick="{{ closeCheckout }}" style="border:1.5px solid var(--line);background:var(--paper);padding:8px 14px;border-radius:10px;cursor:pointer;font-size:13.5px;font-weight:700;color:var(--navy);">← Back to bag</button>
+              </div>
+              <div style="font-weight:700;font-size:13px;margin:clamp(12px,2vh,22px) 0 10px;">Delivery details</div>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:10px;">
+                <input value="{{ fName }}" onChange="{{ onFName }}" placeholder="Full name *" style="padding:12px 14px;border:1.5px solid {{ fNameBorder }};border-radius:10px;font-size:14px;outline:none;">
+                <input value="{{ fPhone }}" onChange="{{ onFPhone }}" type="tel" placeholder="Phone / WhatsApp number * (03XX XXXXXXX)" style="padding:12px 14px;border:1.5px solid {{ fPhoneBorder }};border-radius:10px;font-size:14px;outline:none;">
+                <input type="email" value="{{ fEmail }}" onChange="{{ onFEmail }}" placeholder="Email * (for your order confirmation)" style="padding:12px 14px;border:1.5px solid {{ fEmailBorder }};border-radius:10px;font-size:14px;outline:none;">
+                <textarea value="{{ fAddress }}" onChange="{{ onFAddress }}" rows="2" placeholder="Delivery address *" style="grid-column:1/-1;padding:12px 14px;border:1.5px solid {{ fAddressBorder }};border-radius:10px;font-size:14px;outline:none;resize:vertical;"></textarea>
+                <select value="{{ fCity }}" onChange="{{ onFCity }}" style="padding:12px 14px;border:1.5px solid {{ fCityBorder }};border-radius:10px;font-size:14px;outline:none;background:#fff;color:var(--navy);">
+                  <option value="">Select your city *</option>
+                  <sc-for list="{{ cityOptions }}" as="ct" hint-placeholder-count="0"><option value="{{ ct.value }}">{{ ct.label }}</option></sc-for>
+                </select>
+                <sc-if value="{{ cityOther }}" hint-placeholder-val="{{ false }}"><input value="{{ fCityOther }}" onChange="{{ onFCityOther }}" placeholder="Type your city / town" style="padding:12px 14px;border:1.5px solid {{ fCityBorder }};border-radius:10px;font-size:14px;outline:none;"></sc-if>
+              </div>
+              <div style="font-weight:700;font-size:13px;margin:clamp(12px,2vh,20px) 0 10px;">Payment method</div>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px;">
+                <sc-for list="{{ payOptions }}" as="pm" hint-placeholder-count="3">
+                  <button onClick="{{ pm.onClick }}" style="display:flex;align-items:center;gap:12px;text-align:left;padding:13px 15px;border-radius:12px;cursor:pointer;border:1.5px solid {{ pm.border }};background:{{ pm.bg }};">
+                    <span style="width:18px;height:18px;border-radius:50%;border:2px solid {{ pm.dot }};display:grid;place-items:center;flex:none;"><span style="width:9px;height:9px;border-radius:50%;background:{{ pm.dotFill }};"></span></span>
+                    <span><span style="font-weight:700;font-size:14px;color:var(--navy);display:block;">{{ pm.title }}</span><span style="font-size:12.5px;color:var(--muted);">{{ pm.sub }}</span></span>
+                  </button>
+                </sc-for>
+              </div>
+
+              <sc-if value="{{ formError }}" hint-placeholder-val="{{ false }}">
+                <div style="color:#c0392b;font-size:13px;font-weight:600;margin-top:14px;">{{ formErrorMsg }}</div>
+              </sc-if>
+            </div>
+            <div style="background:var(--paper);border-left:1px solid var(--line);padding:clamp(18px,2.4vh,28px) 28px;display:flex;flex-direction:column;position:sticky;top:96px;align-self:start;">
+              <div style="font-family:var(--disp);font-weight:700;font-size:18px;color:var(--navy);margin-bottom:16px;">Order summary</div>
+              <div style="display:flex;flex-direction:column;gap:12px;max-height:{{ summaryMax }};min-height:64px;overflow-y:auto;">
+                <sc-for list="{{ cart }}" as="it" hint-placeholder-count="2">
+                  <div style="display:flex;gap:11px;align-items:center;">
+                    <div style="width:48px;height:48px;border-radius:9px;overflow:hidden;background:{{ it.tint }};flex:none;position:relative;"><image-slot id="{{ it.slot }}" shape="rect" src="{{ it.img }}" placeholder=""></image-slot><span style="position:absolute;top:-6px;right:-6px;background:var(--navy);color:#fff;font-size:11px;font-weight:700;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;">{{ it.qty }}</span></div>
+                    <div style="flex:1;min-width:0;"><div style="font-weight:700;font-size:13px;">{{ it.name }}</div><div style="font-size:11.5px;color:var(--muted);">{{ it.meta }}</div></div>
+                    <span style="font-weight:700;font-size:13px;">{{ it.lineLabel }}</span>
+                  </div>
+                </sc-for>
+              </div>
+              <div style="border-top:1px solid var(--line);margin-top:16px;padding-top:16px;">
+                <div style="display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px;"><span style="color:var(--muted);">Subtotal</span><span style="font-weight:600;">{{ subtotalLabel }}</span></div>
+                <div style="display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:12px;"><span style="color:var(--muted);">Delivery</span><span style="font-weight:600;color:{{ shipColor }};">{{ shippingLabel }}</span></div>
+                <div style="display:flex;justify-content:space-between;font-family:var(--disp);font-size:21px;font-weight:700;color:var(--navy);"><span>Total</span><span>{{ totalLabel }}</span></div>
+              </div>
+              <sc-if value="{{ payIsBank }}" hint-placeholder-val="{{ false }}">
+                <div style="margin-top:14px;border:1.5px solid var(--teal);border-radius:12px;background:#f2fbfb;padding:12px 14px;display:flex;flex-direction:column;gap:6px;">
+                  <div style="font-weight:800;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);">Bank transfer · {{ totalLabel }}</div>
+                  <sc-for list="{{ bankRows }}" as="b" hint-placeholder-count="4">
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13px;">
+                      <span style="color:var(--muted);flex:none;">{{ b.label }}</span>
+                      <span style="display:flex;align-items:center;gap:8px;min-width:0;"><b style="color:var(--navy);word-break:break-all;text-align:right;">{{ b.value }}</b><sc-if value="{{ b.canCopy }}" hint-placeholder-val="{{ false }}"><button onClick="{{ b.onCopy }}" style="flex:none;border:1px solid var(--line);background:#fff;border-radius:7px;padding:3px 8px;font-weight:700;font-size:11px;cursor:pointer;color:var(--navy);">{{ b.copyLabel }}</button></sc-if></span>
+                    </div>
+                  </sc-for>
+                  <div style="font-size:11.5px;line-height:1.45;color:#7a4a10;margin-top:2px;">After placing the order, send the payment screenshot on WhatsApp or Instagram.</div>
+                </div>
+              </sc-if>
+              <button onClick="{{ placeOrder }}" style="margin-top:18px;width:100%;background:var(--teal);color:#fff;border:none;font-weight:700;font-size:15px;padding:15px;border-radius:12px;cursor:pointer;box-shadow:0 4px 0 #1e9a98;" style-hover="background:#25a5a3;">Place order</button>
+              <p style="font-size:11.5px;color:var(--muted);text-align:center;margin:10px 0 0;">Your details are safe. Cash on delivery all over Pakistan.</p>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
+
+  <footer style="background:var(--navy);color:rgba(243,247,251,.78);">
+    <div style="max-width:1200px;margin:0 auto;padding:48px 24px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:32px;">
+      <div>
+        <img src="assets/brand/logo-word.png" alt="WaggleTails" style="height:48px;width:auto;max-width:100%;display:block;object-fit:contain;filter:brightness(0) invert(1);opacity:.95;">
+        <p style="font-size:14px;line-height:1.6;margin:14px 0 0;max-width:280px;">Soft on fur. Gentle on skin. Hand-stitched collars, bows, ties and bandanas, made in Pakistan.</p>
+        <div style="display:flex;gap:10px;margin-top:18px;">
+          <a href="{{ instaUrl }}" target="_blank" style="width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.12);display:grid;place-items:center;color:#fff;" style-hover="background:var(--coral);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+          <a href="{{ waHref }}" target="_blank" style="width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.12);display:grid;place-items:center;color:#fff;" style-hover="background:#25d366;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.2-4.6-.1-.2-1.2-1.6-1.2-3 0-1.5.7-2.2 1-2.5.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6c-.2.2-.4.4-.2.7.2.4.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l.7-.9c.2-.3.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.8-.1 1.5z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:700;font-size:14px;margin-bottom:14px;">Shop</div>
+        <div style="display:grid;gap:9px;font-size:14px;"><a href="#shop" style="color:rgba(243,247,251,.78);">Collars</a><a href="#shop" style="color:rgba(243,247,251,.78);">Bow ties</a><a href="#shop" style="color:rgba(243,247,251,.78);">Neck ties</a><a href="#shop" style="color:rgba(243,247,251,.78);">Bandanas</a><a href="#custom" style="color:rgba(243,247,251,.78);">Charm collars</a></div>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:700;font-size:14px;margin-bottom:14px;">Help</div>
+        <div style="display:grid;gap:9px;font-size:14px;"><a href="#contact" style="color:rgba(243,247,251,.78);">Custom orders</a><a href="#contact" style="color:rgba(243,247,251,.78);">Sizing guide</a><a href="#contact" style="color:rgba(243,247,251,.78);">Shipping &amp; returns</a></div>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:700;font-size:14px;margin-bottom:14px;">Payments</div>
+        <div style="font-size:13.5px;line-height:1.7;">Cash on Delivery<br>Bank transfer (Raqami Islamic Digital Bank)</div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.14);">
+      <div style="max-width:1200px;margin:0 auto;padding:18px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12.5px;">
+        <span>© 2026 WaggleTails · Handmade in Pakistan</span>
+        <span>Privacy Policy · Terms of Service</span>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <sc-if value="{{ showChat }}" hint-placeholder-val="{{ true }}">
+  <div style="position:fixed;right:20px;bottom:20px;z-index:90;display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+    <sc-if value="{{ chatOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="width:300px;max-width:calc(100vw - 40px);background:var(--paper);border-radius:20px;box-shadow:0 24px 50px -16px rgba(20,36,63,.45);overflow:hidden;animation:wtPop .2s ease;">
+        <div style="background:var(--navy);color:#fff;padding:16px 18px;">
+          <div style="font-family:var(--disp);font-weight:700;font-size:19px;">Chat with WaggleTails</div>
+          <div style="font-size:12.5px;opacity:.8;margin-top:3px;">Questions, sizing or custom colours? We usually reply within minutes.</div>
+        </div>
+        <div style="padding:14px;display:flex;flex-direction:column;gap:10px;">
+          <a href="{{ waChatHref }}" onClick="{{ openWaChat }}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:#e8f8ee;color:#0f5132;text-decoration:none;font-weight:700;font-size:14.5px;">
+            <span style="width:38px;height:38px;border-radius:50%;background:#25d366;display:grid;place-items:center;flex:none;"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></span>
+            <span style="display:flex;flex-direction:column;"><span>WhatsApp us</span><span style="font-weight:500;font-size:12px;opacity:.8;">{{ waLabel }}</span></span>
+          </a>
+          <a href="{{ igDmHref }}" onClick="{{ openIgDm }}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:#fdecf3;color:#7a1f4a;text-decoration:none;font-weight:700;font-size:14.5px;">
+            <span style="width:38px;height:38px;border-radius:50%;background:linear-gradient(45deg,#f9a03f,#e1306c,#833ab4);display:grid;place-items:center;flex:none;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="#fff"></circle></svg></span>
+            <span style="display:flex;flex-direction:column;"><span>DM on Instagram</span><span style="font-weight:500;font-size:12px;opacity:.8;">{{ instaLabel }}</span></span>
+          </a>
+        </div>
+      </div>
+    </sc-if>
+    <button onClick="{{ toggleChat }}" aria-label="Chat with us" style="height:58px;padding:0 20px 0 16px;border:none;border-radius:30px;background:var(--coral);color:#fff;font-weight:700;font-size:15px;display:flex;align-items:center;gap:9px;cursor:pointer;box-shadow:0 12px 26px -8px rgba(240,90,110,.7);" style-hover="background:#e8485c;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg>
+      {{ chatBtnLabel }}
+    </button>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ confirmOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ cancelConfirm }}" style="position:fixed;inset:0;z-index:120;background:rgba(20,36,63,.6);display:grid;place-items:center;padding:24px;animation:wtFade .18s ease;">
+      <div onClick="{{ stop }}" style="background:var(--paper);border-radius:22px;max-width:480px;width:100%;max-height:calc(100vh - 48px);overflow-y:auto;padding:26px;animation:wtPop .22s ease;box-shadow:0 30px 60px -20px rgba(20,36,63,.5);">
+        <h3 style="font-family:var(--disp);font-size:26px;font-weight:700;margin:0;color:var(--navy);">Confirm your order</h3>
+        <p style="font-size:13.5px;color:var(--muted);margin:4px 0 0;">Please check everything before we start making it.</p>
+        <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px;">
+          <sc-for list="{{ confirmItems }}" as="ci" hint-placeholder-count="2">
+            <div style="display:flex;justify-content:space-between;gap:12px;padding-bottom:10px;border-bottom:1px solid var(--line);">
+              <div><div style="font-weight:700;font-size:14px;color:var(--navy);">{{ ci.name }}</div><div style="font-size:12px;color:var(--muted);margin-top:2px;">{{ ci.meta }}</div></div>
+              <div style="font-weight:700;font-size:14px;color:var(--navy);white-space:nowrap;">{{ ci.line }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-family:var(--disp);font-size:20px;font-weight:700;color:var(--navy);margin-top:12px;"><span>Total</span><span>{{ confirmTotal }}</span></div>
+        <div style="margin-top:14px;font-size:13px;color:var(--navy);line-height:1.5;background:var(--cream);border-radius:12px;padding:12px 14px;"><b>Deliver to:</b> {{ confirmName }} · {{ confirmPhone }}<br>{{ confirmAddr }}</div>
+        <sc-if value="{{ confirmHasCustom }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:12px;background:#fdeedd;color:#7a4a10;border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.5;font-weight:600;">Your order has custom colours. Custom pieces take 2–7 days to make, depending on the customisation. We'll send a yarn or fabric photo on WhatsApp for you to approve first.</div>
+        </sc-if>
+        <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:10px;margin-top:18px;">
+          <button onClick="{{ cancelConfirm }}" style="background:var(--paper);color:var(--navy);border:1.5px solid var(--line);font-weight:700;font-size:14.5px;padding:14px;border-radius:12px;cursor:pointer;">Go back</button>
+          <button onClick="{{ confirmOrder }}" style="background:var(--coral);color:#fff;border:none;font-weight:700;font-size:14.5px;padding:14px;border-radius:12px;cursor:pointer;box-shadow:0 4px 0 #d43e52;" style-hover="background:#e8485c;">Yes, place my order</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ cartOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeCart }}" style="position:fixed;inset:0;z-index:90;background:rgba(20,36,63,.55);animation:wtFade .18s ease;">
+      <div onClick="{{ stop }}" style="position:absolute;top:0;right:0;height:100%;width:420px;max-width:100%;background:var(--cream);display:flex;flex-direction:column;animation:wtSlide .26s cubic-bezier(.4,0,.2,1);">
+        <div style="padding:20px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;background:var(--paper);">
+          <div style="font-family:var(--disp);font-weight:700;font-size:21px;color:var(--navy);">Your bag <span style="color:var(--muted);font-size:15px;">({{ cartCount }})</span></div>
+          <button onClick="{{ closeCart }}" style="border:none;background:var(--cream);width:34px;height:34px;border-radius:10px;cursor:pointer;font-size:17px;">✕</button>
+        </div>
+        <sc-if value="{{ hasCart }}" hint-placeholder-val="{{ false }}">
+          <div style="flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;">
+            <sc-for list="{{ cart }}" as="it" hint-placeholder-count="2">
+              <div style="background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:13px;display:flex;gap:12px;">
+                <div style="width:64px;height:64px;border-radius:10px;overflow:hidden;background:{{ it.tint }};flex:none;">
+                  <image-slot id="{{ it.slot }}" shape="rect" src="{{ it.img }}" placeholder=""></image-slot>
+                </div>
+                <div style="flex:1;min-width:0;">
+                  <div style="display:flex;justify-content:space-between;gap:8px;">
+                    <div style="font-weight:700;font-size:14px;color:var(--navy);">{{ it.name }}</div>
+                    <button onClick="{{ it.onRemove }}" style="border:none;background:none;cursor:pointer;color:var(--muted);font-size:13px;">✕</button>
+                  </div>
+                  <div style="font-size:12px;color:var(--muted);margin:2px 0 0;">{{ it.meta }}</div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px;">
+                    <div style="display:flex;align-items:center;border:1px solid var(--line);border-radius:8px;">
+                      <button onClick="{{ it.onDec }}" style="width:28px;height:28px;border:none;background:var(--paper);cursor:pointer;font-size:15px;color:var(--navy);">−</button>
+                      <span style="width:26px;text-align:center;font-weight:700;font-size:13px;">{{ it.qty }}</span>
+                      <button onClick="{{ it.onInc }}" style="width:28px;height:28px;border:none;background:var(--paper);cursor:pointer;font-size:15px;color:var(--navy);">+</button>
+                    </div>
+                    <span style="font-weight:700;font-size:14.5px;color:var(--navy);">{{ it.lineLabel }}</span>
+                  </div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+          <div style="border-top:1px solid var(--line);padding:18px 22px;background:var(--paper);">
+            <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px;"><span style="color:var(--muted);">Subtotal</span><span style="font-weight:600;">{{ subtotalLabel }}</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:12px;"><span style="color:var(--muted);">Delivery</span><span style="font-weight:600;color:{{ shipColor }};">{{ shippingLabel }}</span></div>
+            <div style="display:flex;justify-content:space-between;font-family:var(--disp);font-size:20px;font-weight:700;color:var(--navy);margin-bottom:16px;"><span>Total</span><span>{{ totalLabel }}</span></div>
+            <button onClick="{{ openCheckout }}" style="width:100%;background:var(--coral);color:#fff;border:none;font-weight:700;font-size:15px;padding:15px;border-radius:12px;cursor:pointer;box-shadow:0 4px 0 #d43e52;" style-hover="background:#e8485c;">Checkout →</button>
+          </div>
+        </sc-if>
+        <sc-if value="{{ cartEmpty }}" hint-placeholder-val="{{ true }}">
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:32px;text-align:center;">
+            <img src="assets/brand/logo-mark.png" alt="" style="width:120px;opacity:.45;">
+            <div style="font-family:var(--disp);font-weight:700;font-size:19px;color:var(--navy);">Your bag is empty</div>
+            <p style="color:var(--muted);font-size:14px;margin:0;">Find the perfect look for your buddy.</p>
+            <button onClick="{{ startShopping }}" style="background:var(--teal);color:#fff;border:none;font-weight:700;font-size:14px;padding:12px 22px;border-radius:11px;cursor:pointer;">Start shopping</button>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
+
+
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;+92 337 2497112&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;instagramUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.instagram.com/waggle_tailspk/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;announcement&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Store&quot;},&quot;freeShipThreshold&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:5000,&quot;min&quot;:1000,&quot;max&quot;:10000,&quot;step&quot;:250,&quot;unit&quot;:&quot;Rs.&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Store&quot;},&quot;orderSheetUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://script.google.com/macros/s/AKfycbwAju_ahtg5K781S-yowOBDH9j7-gkRtkfCkZibY0C1mNkixoJdmeJilsFQMPlWKYo/exec&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Orders&quot;},&quot;ownerEmail&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;waggletailspk@gmail.com&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Orders&quot;}}">
+class Component extends DCLogic {
+  state = {
+    activeCat:'all', cartOpen:false, cart:[], quick:null, quickSize:'M', quickName:'', quickQty:1,
+    checkoutOpen:false, orderPlaced:false, orderNo:'', formError:false,
+    form:{ name:'', phone:'', address:'', city:'', payment:'cod' },
+    contact:{ name:'', phone:'', msg:'' }, msgSent:false,
+    confirmOpen:false, chatOpen:false, mat:'all', type:'all', q:'', sort:'featured', quickMode:'stock', quickColors:{}, quickNote:'',
+  };
+
+  PRODUCTS = [
+    { id:'bluecloud', mat:'crochet', glow:false, name:'Blue Cloud Bow Ruffle', cat:'ruffle', price:1500, tone:'teal', img:'w-bluecloud.jpg', material:'Cream scalloped ruffle with a sky-blue rim and a big crochet bow.', badge:'Bestseller' },
+    { id:'rosegarden', mat:'crochet', glow:false, name:'Rose Garden Crochet Collar', cat:'ruffle', price:1500, tone:'coral', img:'w-rosegarden.jpg', material:'Blush ruffle dotted with crochet roses, leaves and a tie bow.', badge:'Bestseller' },
+    { id:'rosebud', mat:'crochet', glow:false, name:'Rosebud Ruffle Collar', cat:'ruffle', price:1500, tone:'coral', img:'w-rosebud.jpg', material:'Two-tone pink scallops with rosebud swirls and a heart-tie bow.', badge:'New' },
+    { id:'pinkfish', mat:'crochet', glow:false, name:'Pink Fishy Ruffle', cat:'ruffle', price:1500, tone:'coral', img:'w-pinkfish.jpg', material:'Bright pink ruffle with a little crochet fish tucked at the side.', badge:'New' },
+    { id:'berrycream', mat:'crochet', glow:false, name:'Berry & Cream Bow Ruffle', cat:'ruffle', price:1500, tone:'coral', img:'w-berrycream.jpg', material:'Cream scallops, a berry-pink neckline and a double crochet bow.', badge:'Handmade' },
+    { id:'koi', mat:'crochet', glow:false, name:'Little Koi Ruffle', cat:'ruffle', price:1500, tone:'orange', img:'w-koi.jpg', material:'Red, mustard and peach rings with a blue fish and pom-pom ties.', badge:'Limited' },
+    { id:'harvest', mat:'crochet', glow:false, name:'Harvest Stripe Ruffle', cat:'ruffle', price:1500, tone:'orange', img:'w-harvest.jpg', material:'Warm berry, peach and mustard spokes with a denim-blue tie.', badge:'Handmade' },
+    { id:'pastel', mat:'crochet', glow:false, name:'Pastel Rainbow Ruffle', cat:'ruffle', price:1500, tone:'teal', img:'w-pastel.jpg', material:'Lilac, cobalt and lemon rings with pink bunny-ear bows and pearls.', badge:'New' },
+    { id:'buttercup', mat:'crochet', glow:false, name:'Buttercup Ruffle Collar', cat:'ruffle', price:1500, tone:'orange', img:'w-buttercup.jpg', material:'Sunny yellow ruffle, cream picot edge and two flower tassels.', badge:'Bestseller' },
+    { id:'violet', mat:'crochet', glow:false, name:'Violet Bloom Collar', cat:'collar', price:1500, tone:'teal', img:'w-violet.jpg', material:'Chunky lilac crochet blooms with black centres on a buckle band.', badge:'Bestseller' },
+    { id:'sagepansy', mat:'crochet', glow:false, name:'Sage Pansy Collar', cat:'collar', price:1500, tone:'teal', img:'w-sagepansy.jpg', material:'Sage crochet band ringed with purple-and-gold pansies.', badge:'Handmade' },
+    { id:'forgetmenot', mat:'crochet', glow:false, name:'Forget-Me-Not Pearl Collar', cat:'collar', price:1500, tone:'teal', img:'w-forgetmenot.jpg', material:'Navy band with blue and white puff flowers and pearl centres.', badge:'New' },
+    { id:'pinkdaisy', mat:'crochet', glow:false, name:'Pink Daisy Chain Collar', cat:'collar', price:1500, tone:'coral', img:'w-pinkdaisy.jpg', material:'Forest-green band with a chain of pink crochet daisies.', badge:'Bestseller' },
+    { id:'sunflower', mat:'crochet', glow:false, name:'Sunflower Crochet Collar', cat:'collar', price:1500, tone:'orange', img:'n11.png', material:'Hand-crocheted green band ringed with golden sunflowers.', badge:'Bestseller' },
+    { id:'lily', mat:'crochet', glow:false, name:'Lily of the Valley Collar', cat:'collar', price:1500, tone:'teal', img:'w-lily.jpg', material:'Cream scallop collar with sage stripes and two lily bell charms.', badge:'Limited' },
+    { id:'lemonsky', mat:'crochet', glow:false, name:'Lemon Sky Scallop Collar', cat:'collar', price:1500, tone:'teal', img:'w-lemonsky.jpg', material:'Cream lace scallops with a sky-blue crochet band and bow.', badge:'New' },
+    { id:'braid', mat:'crochet', glow:false, name:'Pearl Braid Collar', cat:'collar', price:1500, tone:'orange', img:'w-braid.jpg', material:'Peach, rose and denim yarn braided around faux-pearl beads.', badge:'Handmade' },
+    { id:'midnight', mat:'crochet', glow:false, name:'Midnight Bloom Band', cat:'collar', price:1500, tone:'teal', img:'w-midnight.jpg', material:'Soft black crochet band with a mint puff flower and pearl.', badge:'Handmade' },
+    { id:'fishband', mat:'crochet', glow:false, name:'Little Fish Crochet Band', cat:'collar', price:1500, tone:'teal', img:'w-fishband.jpg', material:'Navy and sky-blue crochet band with an orange fish charm.', badge:'New' },
+    { id:'lavscallop', mat:'crochet', glow:false, name:'Lavender Scallop Band', cat:'collar', price:1500, tone:'teal', img:'w-lavscallop.jpg', material:'Lavender shell-stitch band with a mint and gold flower.', badge:'Handmade' },
+    { id:'initial', mat:'cloth', glow:false, name:'Initial Charm Bow', cat:'bow', price:800, tone:'coral', img:'w-initial.jpg', material:'Navy bow with a silver letter charm on a vintage rose band.', badge:'Limited' },
+    { id:'cherrybow', mat:'crochet', glow:false, name:'Cherry Crochet Bow Collar', cat:'bow', price:1500, tone:'coral', img:'w-cherrybow.jpg', material:'Cream crochet band with a chunky cherry-red bow.', badge:'Bestseller' },
+    { id:'lilacbow', mat:'crochet', glow:false, name:'Lilac Crochet Bow', cat:'bow', price:1500, tone:'teal', img:'w-lilacbow.jpg', material:'Snow-white chunky band finished with a purple crochet bow.', badge:'New' },
+    { id:'tealbow', mat:'crochet', glow:false, name:'Teal Pearl Bow Band', cat:'bow', price:1500, tone:'teal', img:'w-tealbow.jpg', material:'Deep teal crochet band with an aqua bow and pearl knot.', badge:'Handmade' },
+    { id:'rosebow', mat:'cloth', glow:false, name:'Vintage Rose Bow', cat:'bow', price:800, tone:'coral', img:'w-rosebow.jpg', material:'Rose-print cotton bow on a forest-green band.', badge:'Handmade' },
+    { id:'candystripe', mat:'cloth', glow:false, name:'Candy Stripe Bow', cat:'bow', price:800, tone:'teal', img:'w-candystripe.jpg', material:'Sky-blue band and bow with red and white candy stripes.', badge:'Bestseller' },
+    { id:'bandhani', mat:'cloth', glow:false, name:'Royal Bandhani Tie', cat:'tie', price:800, tone:'teal', img:'w-bandhani.jpg', material:'Cobalt bandhani-dot tie with a matching bow and sky-blue knot.', badge:'New' },
+    { id:'bluebird', mat:'cloth', glow:false, name:'Bluebird Embroidered Tie', cat:'tie', price:800, tone:'teal', img:'n18.png', material:'Embroidered pale blue tie under a navy satin bow.', badge:'Limited' },
+    { id:'tuxedotie', mat:'cloth', glow:false, name:'Tuxedo Collar & Stripe Tie', cat:'tie', price:800, tone:'coral', img:'w-tuxedotie.jpg', material:'Black linen collar points over a rose-and-cream stripe tie.', badge:'Bestseller' },
+    { id:'floraltie', mat:'cloth', glow:false, name:'Floral Bow & Grid Tie', cat:'tie', price:800, tone:'orange', img:'w-floraltie.jpg', material:'White windowpane tie and band topped with a rose-print bow.', badge:'New' },
+    { id:'tweedplaid', mat:'cloth', glow:false, name:'Tweed Plaid Tie', cat:'tie', price:800, tone:'orange', img:'n10.png', material:'Warm checked necktie on a charcoal denim band.', badge:'Handmade' },
+    { id:'pinstripe', mat:'cloth', glow:false, name:'White Pinstripe Tie', cat:'tie', price:800, tone:'teal', img:'n17a.png', material:'Crisp white pinstripe necktie with a black button knot.', badge:'Bestseller' },
+    { id:'denimpane', mat:'cloth', glow:false, name:'Denim Windowpane Tie', cat:'tie', price:800, tone:'teal', img:'n17b.png', material:'Washed denim windowpane tie with a pearl pin.', badge:'New' },
+    { id:'gl-daisy', mat:'crochet', glow:true, name:'Daisy Charm', cat:'collar', price:2000, tone:'teal', img:'daisy.jpg', glowHex:'#9dffb0', material:'Black crochet band with cream pearl daisies that glow mint after dark.', badge:'New' },
+    { id:'gl-prettybow', mat:'crochet', glow:true, name:'Pretty Bow', cat:'ruffle', price:2000, tone:'teal', img:'prettybow.jpg', glowHex:'#9dffb0', material:'Scalloped ruffle collar with a big crochet bow — the whole bow lights up at night.', badge:'New' },
+    { id:'gl-starry', mat:'crochet', glow:true, name:'Starry Night', cat:'collar', price:2000, tone:'teal', img:'starry.jpg', glowHex:'#9dffb0', material:'Navy band with crescent moon and stars that glow like a night sky.', badge:'New' },
+    { id:'gl-sunny', mat:'crochet', glow:true, name:'Sunny Bloom', cat:'collar', price:2000, tone:'teal', img:'sunny.jpg', glowHex:'#9dffb0', material:'Chunky sunflower collar with leafy accents; the petals glow after sunset.', badge:'New' },
+    { id:'gl-gentleman', mat:'crochet', glow:true, name:'Gentleman Glow', cat:'tie', price:2000, tone:'teal', img:'gentleman.jpg', glowHex:'#9dffb0', material:'Striped crochet necktie on a black band — glowing stripes for evening walks.', badge:'New' },
+    { id:'gl-rosy', mat:'crochet', glow:true, name:'Rosy Garden', cat:'collar', price:2000, tone:'teal', img:'rosy.jpg', glowHex:'#9dffb0', material:'Hand-rolled crochet roses on a black band, glowing softly in the dark.', badge:'New' },
+    { id:'gl-ocean', mat:'crochet', glow:true, name:'Ocean Buddy', cat:'collar', price:2000, tone:'teal', img:'ocean.jpg', glowHex:'#9dffb0', material:'Wavy navy collar with a glowing shell-scallop edge and button centre.', badge:'New' },
+    { id:'gl-butterfly', mat:'crochet', glow:true, name:'Butterfly Glow', cat:'bow', price:2000, tone:'teal', img:'butterfly.jpg', glowHex:'#9dffb0', material:'Butterfly bow with dangling pom-poms that glow from wingtip to tassel.', badge:'New' },
+    { id:'gl-snowy', mat:'crochet', glow:true, name:'Snowy Nights', cat:'bandana', price:2000, tone:'teal', img:'snowy.jpg', glowHex:'#9dffb0', material:'Granny-stitch crochet bandana with a glowing scalloped trim.', badge:'New' },
+    { id:'pawtie', mat:'crochet', glow:false, name:'Pink Paw Crochet Tie', cat:'tie', price:1500, tone:'coral', img:'w-pawtie.jpg', material:'Bubblegum crochet tie with a sunny yellow paw print.', badge:'Bestseller' },
+    { id:'honeytie', mat:'crochet', glow:false, name:'Honey Stripe Crochet Tie', cat:'tie', price:1500, tone:'orange', img:'w-honeytie.jpg', material:'Cream crochet tie with honey-mustard chevron stripes.', badge:'Handmade' },
+    { id:'tuxedo', mat:'cloth', glow:false, name:'Tuxedo Bandana', cat:'bandana', price:800, tone:'teal', img:'w-tuxedo.jpg', material:'Black and white shirt-front bandana with buttons and a bow.', badge:'Bestseller' },
+    { id:'peony', mat:'cloth', glow:false, name:'Peony Garden Bandana', cat:'bandana', price:800, tone:'coral', img:'w-peony.jpg', material:'Vintage peony-print bandana on a forest-green band.', badge:'New' },
+    { id:'granny', mat:'crochet', glow:false, name:'Granny Garden Bandana', cat:'bandana', price:1500, tone:'orange', img:'w-granny.jpg', material:'Granny-stitch bandana in cream, forest, rust and pink.', badge:'Handmade' },
+    { id:'rustlace', mat:'crochet', glow:false, name:'Rust Lace Crochet Bandana', cat:'bandana', price:1500, tone:'orange', img:'w-rustlace.jpg', material:'Open cream lacework framed in rust shell scallops.', badge:'Limited' },
+    { id:'daisyband', mat:'crochet', glow:false, name:'Sage Daisy Bandana', cat:'bandana', price:1500, tone:'teal', img:'w-daisyband.jpg', material:'Sage granny-stitch bandana with a white crochet daisy.', badge:'New' },
+  ];
+
+  TONES = {
+    coral:  { tint:'#fee7ea', accent:'#f4566b' },
+    teal:   { tint:'#e2f6f5', accent:'#2bb8b6' },
+    orange: { tint:'#fdeedd', accent:'#f7862a' },
+  };
+
+  fmt(n){ return 'Rs. ' + Number(n).toLocaleString('en-US'); }
+  get threshold(){ return this.props.freeShipThreshold ?? 5000; }
+  get waDigits(){ return String(this.props.whatsappNumber ?? '+92 337 2497112').replace(/[^0-9]/g,''); }
+
+  scrollShop(){ this.go('shop'); }
+  PAGES=['home','glow','shop','custom','reviews','story','contact','checkout'];
+  readPage(){ const k=(location.hash||'').slice(1); if(k.startsWith('p-')) return 'product'; return this.PAGES.includes(k)?k:'home'; }
+  syncRoute(){ const page=this.readPage(); if(page==='checkout'&&!this.state.cart.length&&!this.state.orderPlaced){ location.hash='shop'; return; } if(page==='product'){ const id=location.hash.slice(3); const p=this.PRODUCTS.find(x=>x.id===id); if(!p){ this.setState({page:'home',quick:null}); return; } if(!this.state.quick||this.state.quick.id!==id) this.loadQuick(p); this.setState({page}); } else this.setState({ page, quick:null }); }
+  go(p){ if(location.hash!=='#'+p) location.hash=p; else { this.setState({ page:p }); window.scrollTo(0,0); } }
+  componentDidMount(){ this._hc=()=>{ this.syncRoute(); window.scrollTo(0,0); }; window.addEventListener('hashchange',this._hc); this.syncRoute(); }
+  componentWillUnmount(){ window.removeEventListener('hashchange',this._hc); }
+  setCat(c){ this.setState({ activeCat:c }); }
+  PALETTE = [['Cream','#f4ead8'],['White','#ffffff'],['Baby Pink','#f6b8c4'],['Rose','#e05a7a'],['Red','#c62f3a'],['Orange','#f39a4a'],['Yellow','#f5d94a'],['Mint','#9fdccd'],['Green','#3f8a4e'],['Sky Blue','#8cc4ef'],['Navy','#1f2d5c'],['Lilac','#b9a0e3'],['Purple','#7a3fa8'],['Black','#1a1a1a']];
+  TYPES = { ruffle:'Ruffle Collars', collar:'Collars', bow:'Bow Ties', tie:'Neck Ties', bandana:'Bandanas' };
+  CUSTOM_FEE = 300;
+  PETS = { pinkdaisy:['pinkdaisy','pinkdaisy-2'], violet:['violet'], sunflower:['sunflower'], bandhani:['bandhani'], bluebird:['bluebird'], tweedplaid:['tweedplaid'], candystripe:['candystripe','candystripe-2'], rosebud:['rosebud'], pinkfish:['pinkfish'], midnight:['midnight'], tealbow:['tealbow'], tuxedo:['tuxedo'], lavscallop:['lavscallop'], fishband:['fishband'], granny:['granny'], lilacbow:['lilacbow'] };
+  NOCUT = ['glowgreen','glowpink','glowblue','glowyellow','glowwhite','midnight','fishband','lavscallop','rosebow','tuxedotie','floraltie','pinstripe','tuxedo','cherrybow','tealbow'];
+  LIVE = ['glowgreen','glowpink','glowblue','glowyellow','glowwhite','pinkdaisy','violet','sunflower','bandhani','bluebird','tweedplaid','candystripe','rosebud','pinkfish','midnight','tuxedo','lavscallop','fishband','granny','lilacbow','bluecloud','pawtie','honeytie','lemonsky','rosebow','daisyband','sagepansy','forgetmenot','lily','braid','rosegarden','koi','cherrybow','rustlace','tuxedotie','pinstripe','denimpane'];
+  CUTS = ['bandhani','berrycream','bluebird','bluecloud','braid','buttercup','candystripe','daisyband','denimpane','forgetmenot','granny','harvest','honeytie','initial','koi','lemonsky','lilacbow','lily','pastel','pawtie','peony','pinkdaisy','pinkfish','rosebud','rosegarden','rustlace','sagepansy','sunflower','tweedplaid','violet'];
+  hasCut(p){ return !!p&&this.CUTS.includes(p.id); }
+  drawGeneric(x,W,T,p){
+    x.clearRect(0,0,W,W); const cx=W/2, cy=W*0.5, R=W*0.34, sh=(c,k)=>'rgb('+c.map(v=>Math.max(0,Math.min(255,v*k))).join(',')+')';
+    x.save(); x.translate(cx,cy); x.scale(1,0.62);
+    x.lineCap='round'; x.lineWidth=W*0.11; x.strokeStyle=sh(T[0],0.8); x.beginPath(); x.arc(0,6,R,0,Math.PI*2); x.stroke();
+    x.lineWidth=W*0.1; x.strokeStyle=sh(T[0],1); x.beginPath(); x.arc(0,0,R,0,Math.PI*2); x.stroke();
+    x.fillStyle=sh(T[0],0.72); for(let a=0;a<Math.PI*2;a+=0.09){ x.beginPath(); x.ellipse(Math.cos(a)*R,Math.sin(a)*R,4,7,a,0,Math.PI*2); x.fill(); }
+    x.restore();
+    x.fillStyle='#1c1c1c'; x.fillRect(cx-W*0.055,cy-R*0.62-W*0.05,W*0.11,W*0.07);
+    const by=cy+R*0.62, bw=W*0.17;
+    if(p&&p.cat==='tie'){ x.fillStyle=sh(T[1],1); x.beginPath(); x.moveTo(cx-bw*0.35,by-6); x.lineTo(cx+bw*0.35,by-6); x.lineTo(cx+bw*0.55,by+W*0.26); x.lineTo(cx,by+W*0.34); x.lineTo(cx-bw*0.55,by+W*0.26); x.closePath(); x.fill();
+      x.fillStyle=sh(T[2],1); x.fillRect(cx-bw*0.32,by-14,bw*0.64,22); }
+    else if(p&&p.cat==='bandana'){ x.fillStyle=sh(T[1],1); x.beginPath(); x.moveTo(cx-R*0.95,by-W*0.06); x.lineTo(cx+R*0.95,by-W*0.06); x.lineTo(cx,by+W*0.3); x.closePath(); x.fill();
+      x.fillStyle=sh(T[2],1); for(let i=0;i<5;i++){ x.beginPath(); x.arc(cx-R*0.5+i*R*0.25,by+W*0.02+(i%2)*14,9,0,Math.PI*2); x.fill(); } }
+    else if(p&&p.cat==='bow'){ x.fillStyle=sh(T[1],1); x.beginPath(); x.moveTo(cx,by); x.bezierCurveTo(cx-bw*1.4,by-bw*0.9,cx-bw*1.4,by+bw*0.9,cx,by); x.fill(); x.beginPath(); x.moveTo(cx,by); x.bezierCurveTo(cx+bw*1.4,by-bw*0.9,cx+bw*1.4,by+bw*0.9,cx,by); x.fill();
+      x.fillStyle=sh(T[2],1); x.beginPath(); x.ellipse(cx,by,bw*0.22,bw*0.32,0,0,Math.PI*2); x.fill(); }
+    else { const fl=(fx,fy,r)=>{ x.fillStyle=sh(T[1],1); for(let k=0;k<5;k++){ const a=k*Math.PI*0.4-Math.PI/2; x.beginPath(); x.arc(fx+Math.cos(a)*r*0.62,fy+Math.sin(a)*r*0.62,r*0.5,0,Math.PI*2); x.fill(); } x.fillStyle=sh(T[2],1); x.beginPath(); x.arc(fx,fy,r*0.34,0,Math.PI*2); x.fill(); };
+      [-0.75,-0.38,0,0.38,0.75].forEach((f,i)=>fl(cx+f*R, cy+Math.sqrt(1-f*f)*R*0.62, i===2?W*0.09:W*0.075)); }
+  }
+  thumb(p){ return p.glow ? 'assets/shop/glow/'+p.img : 'assets/shop/v3/'+p.id+'.jpg'; }
+  petSrc(n){ return 'assets/shop/pet/'+n+'.jpg'; }
+  YARNS=[['White','#f4efe6'],['Blue','#9cc8ef'],['Pink','#f5a8c4'],['Yellow','#eef27a'],['Green','#a6e6a0']];
+  openQuick(p){ if(!p) return; const cur=this.state.page||'home'; if(cur!=='product'){ this._ret=cur; this._inApp=true; } location.hash='p-'+p.id; }
+  loadQuick(p){ if(this._an&&this._an[p.id]) this._an[p.id].extra=[]; setTimeout(()=>this.prep(p),0); this.setState({ quickYarn:'White', quickNoPreview:false, quick:p, quickSize:'M', quickName:'', quickQty:1, quickMode:'stock', quickNote:'', quickBase:null, quickColors:{} }); }
+  recolorRef = React.createRef();
+  hexRgb(h){ h=String(h).replace('#',''); return [0,2,4].map(i=>parseInt(h.slice(i,i+2),16)||0); }
+  rgbHex(c){ return '#'+c.map(v=>Math.round(Math.max(0,Math.min(255,v))).toString(16).padStart(2,'0')).join(''); }
+  NOPREVIEW=['tuxedo','sunflower','rustlace','tweedplaid','tuxedotie','honeytie','pinstripe','granny','braid'];
+  canRecolor(p){ return !!p&&!p.glow; }
+  async analyze(p){
+    this._an=this._an||{}; if(this._an[p.id]) return this._an[p.id];
+    const img=new Image(); await new Promise((ok,err)=>{ img.onload=ok; img.onerror=err; img.src=this.thumb(p); if(img.complete&&img.naturalWidth) ok(); });
+    const W=440,c=document.createElement('canvas'); c.width=W; c.height=W; const x=c.getContext('2d'); x.drawImage(img,0,0,W,W);
+    const orig=x.getImageData(0,0,W,W), an=this.analyzePhoto(orig.data,W);
+    return (this._an[p.id]={...an,W,orig,base:an.k?an.base.map(c=>this.rgbHex(c)):[]});
+  }
+  analyzePhoto(d,W){
+    const N=W*W,wL=0.35,lin=v=>{v/=255;return v<=0.04045?v/12.92:((v+0.055)/1.055)**2.4;},hf=t=>t>0.008856?Math.cbrt(t):7.787*t+16/116;
+    const F=new Float32Array(N*3);
+    for(let i=0;i<N;i++){const R=lin(d[i*4]),G=lin(d[i*4+1]),B=lin(d[i*4+2]);const fx=hf((R*0.4124+G*0.3576+B*0.1805)/0.95047),fy=hf(R*0.2126+G*0.7152+B*0.0722),fz=hf((R*0.0193+G*0.1192+B*0.9505)/1.08883);F[i*3]=(116*fy-16)*wL;F[i*3+1]=500*(fx-fy);F[i*3+2]=200*(fy-fz);}
+    const fv=i=>[F[i*3],F[i*3+1],F[i*3+2]],dist=(a,b)=>(a[0]-b[0])**2+(a[1]-b[1])**2+(a[2]-b[2])**2;
+    const km=(pts,K)=>{let C=[fv(pts[0])];while(C.length<K){let best,bd=-1;for(let s=0;s<pts.length;s+=5){const v=fv(pts[s]);const m=Math.min(...C.map(q=>dist(v,q)));if(m>bd){bd=m;best=v;}}C.push(best);}
+      let S;for(let it=0;it<10;it++){S=C.map(()=>[0,0,0,0,0,0,0]);for(const i of pts){const v=fv(i);let j=0,m=1e9;C.forEach((q,k)=>{const dd=dist(v,q);if(dd<m){m=dd;j=k;}});const s=S[j];s[0]+=v[0];s[1]+=v[1];s[2]+=v[2];s[3]++;s[4]+=d[i*4];s[5]+=d[i*4+1];s[6]+=d[i*4+2];}C=S.map((s,k)=>s[3]?[s[0]/s[3],s[1]/s[3],s[2]/s[3]]:C[k]);}
+      return C.map((c,k)=>({c,n:S[k][3],rgb:S[k][3]?[S[k][4]/S[k][3],S[k][5]/S[k][3],S[k][6]/S[k][3]]:[200,200,200]}));};
+    const top=[],zone=[];for(let y=0;y<W;y+=2)for(let x=0;x<W;x+=2){const i=y*W+x;if(y>W*0.04&&y<W*0.3&&x>W*0.3&&x<W*0.7)top.push(i);if(y>W*0.42&&x>W*0.15&&x<W*0.85)zone.push(i);}
+    const E=km(top,6).filter(q=>q.n>top.length*0.04).map(q=>q.c);
+    let Z=km(zone,9);
+    for(let merged=true,guard=0;merged&&guard<40;guard++){merged=false;
+      for(let i=0;i<Z.length&&!merged;i++)for(let j=i+1;j<Z.length&&!merged;j++){const A=Z[i],B=Z[j];
+        const chA=Math.hypot(A.c[1],A.c[2]),chB=Math.hypot(B.c[1],B.c[2]),hd0=Math.abs(Math.atan2(A.c[2],A.c[1])-Math.atan2(B.c[2],B.c[1])),hd=Math.min(hd0,2*Math.PI-hd0);
+        const ab=Math.hypot(A.c[1]-B.c[1],A.c[2]-B.c[2]),dL=Math.abs(A.c[0]-B.c[0])/wL;
+        if((chA>14&&chB>14&&hd<0.42&&dL<45)||(ab<9&&dL<22)){const n=A.n+B.n;A.c=A.c.map((v,t)=>(v*A.n+B.c[t]*B.n)/n);A.rgb=A.rgb.map((v,t)=>(v*A.n+B.rgb[t]*B.n)/n);A.n=n;Z.splice(j,1);merged=true;}}}
+    // each merged cluster may hold several luminance levels: keep representative members for distance
+    const keep=Z.map(z=>({...z,de:Math.sqrt(Math.min(...E.map(e=>dist(e,z.c))))})).filter(z=>z.de>8&&z.n>zone.length*0.03).sort((a,b)=>b.n-a.n).slice(0,3);
+    const k=keep.length,J=new Uint8Array(N),A=new Float32Array(N),Lr=new Float32Array(N);
+    // chroma-weighted distance: compare hue/chroma strongly, lightness weakly (shadows of the same yarn)
+    const dk=(v,c)=>(v[0]-c[0])**2*0.35+(v[1]-c[1])**2+(v[2]-c[2])**2;
+    for(let i=0;i<N;i++)Lr[i]=F[i*3]/wL;
+    for(let i=0;i<N;i++){const y=(i/W)|0;if(y<W*0.26||!k)continue;const v=fv(i);
+      let j=0,m=1e9;for(let t=0;t<k;t++){const dd=dk(v,keep[t].c);if(dd<m){m=dd;j=t;}}
+      let de=1e9;for(const e of E){const dd=dk(v,e);if(dd<de)de=dd;}
+      if(m<de*0.75&&m<700){J[i]=j;A[i]=Math.min(1,(de-m)/(de*0.5+1));}}
+    // drop "fringe" clusters: anti-aliased edges between parts, thin with little interior
+    if(k>1){const tot=new Float64Array(k),inn=new Float64Array(k);
+      for(let i=W;i<N-W;i++){if(A[i]<=0.3)continue;const j=J[i];tot[j]++;if(A[i-1]>0.3&&A[i+1]>0.3&&A[i-W]>0.3&&A[i+W]>0.3&&J[i-1]===j&&J[i+1]===j&&J[i-W]===j&&J[i+W]===j)inn[j]++;}
+      const drop=[];for(let j=0;j<k;j++)if(tot[j]&&inn[j]/tot[j]<0.3)drop.push(j);
+      if(drop.length&&drop.length<k){const map=[];let n=0;for(let j=0;j<k;j++)map[j]=drop.includes(j)?-1:n++;
+        const kept=keep.filter((_,j)=>!drop.includes(j));
+        for(let i=0;i<N;i++){if(!A[i])continue;let m=map[J[i]];if(m<0){const v=fv(i);let bd=1e9;kept.forEach((z,t)=>{const dd=dk(v,z.c);if(dd<bd){bd=dd;m=t;}});}J[i]=m;}
+        keep.splice(0,keep.length,...kept);}}
+    const kk=keep.length;
+    // connected components on A>0.3; keep big ones (drops tongue / ear / background specks)
+    const lab=new Int32Array(N).fill(-1),sizes=[];const st=new Int32Array(N);
+    for(let i=0;i<N;i++){if(A[i]<=0.3||lab[i]>=0)continue;const id=sizes.length;let sp=0,n=0;st[sp++]=i;lab[i]=id;
+      while(sp){const p=st[--sp];n++;const x=p%W,y=(p/W)|0;
+        const nb=[x>0?p-1:-1,x<W-1?p+1:-1,y>0?p-W:-1,y<W-1?p+W:-1];
+        for(const q of nb){if(q>=0&&lab[q]<0&&A[q]>0.3){lab[q]=id;st[sp++]=q;}}}
+      sizes.push(n);}
+    const big=Math.max(0,...sizes),bi=sizes.indexOf(big);let bigTop=W;const sy=new Float64Array(sizes.length);
+    for(let i=0;i<N;i++){const l=lab[i];if(l<0)continue;const y=(i/W)|0;sy[l]+=y;if(l===bi&&y<bigTop)bigTop=y;}
+    let x0=W,x1=0,y1=0;for(let i=0;i<N;i++){if(lab[i]!==bi)continue;const x=i%W,y=(i/W)|0;if(x<x0)x0=x;if(x>x1)x1=x;if(y>y1)y1=y;}
+    const pad=W*0.06,inBox=new Uint8Array(sizes.length);for(let i=0;i<N;i++){const l=lab[i];if(l<0||inBox[l])continue;const x=i%W,y=(i/W)|0;if(x>=x0-pad&&x<=x1+pad&&y>=bigTop-pad&&y<=y1+pad)inBox[l]=1;}
+    const sxl=new Float64Array(sizes.length);for(let i=0;i<N;i++){const l=lab[i];if(l>=0)sxl[l]+=i%W;}
+    const ok=sizes.map((s,l)=>s>=big*0.08&&s>N*0.003&&inBox[l]&&(l===bi||(sy[l]/s>bigTop&&sxl[l]/s>W*0.18&&sxl[l]/s<W*0.82)));
+    const M=new Float32Array(N);
+    for(let i=0;i<N;i++){if(lab[i]>=0&&ok[lab[i]]){const x=i%W;if(x>W*0.06&&x<W*0.94)M[i]=A[i];}}
+    // soft edge: include weak pixels touching kept pixels
+    for(let i=0;i<N;i++){if(M[i]||A[i]<=0)continue;const x=i%W;if((x>0&&M[i-1]>0.3)||(x<W-1&&M[i+1]>0.3)||(i>=W&&M[i-W]>0.3)||(i<N-W&&M[i+W]>0.3))M[i]=A[i];}
+    for(let pass=0;pass<3;pass++){const M2=M.slice(),J2=J.slice();for(let i=W+1;i<N-W-1;i++){if(M[i]>0.6)continue;const x=i%W;if(x<1||x>W-2)continue;let c=0,s=0,jj=0;const nb=[i-1,i+1,i-W,i+W,i-W-1,i-W+1,i+W-1,i+W+1];for(let t=0;t<8;t++){const q=nb[t];if(M[q]>0.6){c++;s+=M[q];jj=J[q];}}if(c>=4){M2[i]=Math.max(M[i],s/c);J2[i]=jj;}}M.set(M2);J.set(J2);}
+    let bx0=W,bx1=0,by0=W,by1=0;for(let i=0;i<N;i++){if(M[i]<=0.3)continue;const x=i%W,y=(i/W)|0;if(x<bx0)bx0=x;if(x>bx1)bx1=x;if(y<by0)by0=y;if(y>by1)by1=y;}
+    const box=bx1>bx0?[bx0-W*0.12,by0-W*0.06,bx1+W*0.12,by1+W*0.12]:[0,W*0.3,W,W];
+    return {F,box,k:kk,J,M,Lr,extra:[],Lc:keep.map(q=>q.c[0]/wL),base:keep.map(q=>q.rgb)};
+  }
+  paintPhoto(orig,an,T){
+    const o=new Uint8ClampedArray(orig);const N=an.M.length;
+    for(let i=0;i<N;i++){const a=an.M[i];if(!a)continue;const q=i*4,j=an.J[i],t=T[j]||T[0];
+      const f=(an.Lr[i]+8)/(an.Lc[j]+8);let R,G,B;
+      if(f<=1){R=t[0]*f;G=t[1]*f;B=t[2]*f;}else{const e=Math.min(1,(f-1)*0.9);R=t[0]+(255-t[0])*e;G=t[1]+(255-t[1])*e;B=t[2]+(255-t[2])*e;}
+      o[q]=orig[q]*(1-a)+R*a;o[q+1]=orig[q+1]*(1-a)+G*a;o[q+2]=orig[q+2]*(1-a)+B*a;}
+    for(let r=0;r<(an.extra||[]).length;r++){const X=an.extra[r],t=T[3+r];if(!t)continue;
+      for(const i of X.px){const q=i*4,f=(an.Lr[i]+8)/(X.Lc+8);let R,G,B;
+        if(f<=1){R=t[0]*f;G=t[1]*f;B=t[2]*f;}else{const e=Math.min(1,(f-1)*0.9);R=t[0]+(255-t[0])*e;G=t[1]+(255-t[1])*e;B=t[2]+(255-t[2])*e;}
+        o[q]=R;o[q+1]=G;o[q+2]=B;}}
+    return o;
+  }
+  paint(){
+    const cv=(this._cv&&this._cv.isConnected)?this._cv:document.querySelector('canvas[data-wt-recolor]'), p=this.state.quick; if(!cv||!p) return;
+    const qc=this.state.quickColors, KEYS=['main','accent','detail'];
+    const an=this._an&&this._an[p.id];
+    if(!this.canRecolor(p)||!an){ this.drawGeneric(cv.getContext('2d'),cv.width,KEYS.map(k=>this.hexRgb(qc[k]||'#f4ead8')),p); return; }
+    if(cv.width!==an.W){ cv.width=an.W; cv.height=an.W; }
+    const T=an.base.map((b,j)=>this.hexRgb(qc[KEYS[j]]||b)); while(T.length<3) T.push([0,0,0]);
+    (an.extra||[]).forEach((X,r)=>T[3+r]=this.hexRgb(qc['x'+r]||X.base));
+    const out=(an.k||(an.extra&&an.extra.length))?this.paintPhoto(an.orig.data,an,T):new Uint8ClampedArray(an.orig.data);
+    cv.getContext('2d').putImageData(new ImageData(out,an.W,an.W),0,0);
+  }
+  prep(q){
+    if(!this.canRecolor(q)){ this.setState({ quickBase:['#f4ead8','#e05a7a','#9bb08a'] }, ()=>this.schedulePaint()); return; }
+    if(this.NOPREVIEW.includes(q.id)){ this.setState({ quickBase:[null,null], quickColors:{}, quickNoPreview:true }, ()=>this.schedulePaint()); return; }
+    this.analyze(q).then(an=>{ if(this.state.quick!==q) return;
+      if(!an.k){ this.setState({ quickBase:[null,null], quickColors:{}, quickNoPreview:true }, ()=>this.schedulePaint()); return; }
+      this.setState({ quickNoPreview:false, quickBase:an.base, quickColors:Object.fromEntries(['main','accent','detail'].slice(0,an.base.length).map((k,j)=>[k,an.base[j]])) }, ()=>this.schedulePaint());
+    }).catch(e=>{ console.warn('recolour analyse failed', e); this.schedulePaint(); });
+  }
+  schedulePaint(){ requestAnimationFrame(()=>requestAnimationFrame(()=>this.paint())); }
+  componentDidUpdate(pp,ps){ if(this.state.quick&&this.state.quickMode==='custom') this.schedulePaint(); }
+  _oldDidUpdate(pp,ps){
+    const s=this.state;
+    if(s.quick && ps.quick!==s.quick && !this.hasCut(s.quick)){ this.setState({ quickBase:['#f4ead8','#e05a7a','#9bb08a'] }); }
+    else if(s.quick && ps.quick!==s.quick){ const q=s.quick; this.analyze(q).then(an=>{ if(this.state.quick!==q) return;
+        this.setState({ quickBase:an.base, quickColors:{ main:an.base[0], accent:an.base[1]||an.base[0], detail:an.base[2]||an.base[0] } }, ()=>this.paint()); }).catch(()=>{}); }
+    else if(s.quick && (ps.quickColors!==s.quickColors || ps.quickMode!==s.quickMode)) this.paint();
+  }
+  colorName(hex){ const f=this.PALETTE.find(c=>c[1].toLowerCase()===String(hex).toLowerCase()); return f?f[0]:String(hex).toUpperCase(); }
+  partsFor(p){ return [['main','Colour 1',3],['accent','Colour 2',2],['detail','Colour 3',1]]; }
+  openCustom(){ this.openQuick(this.PRODUCTS.find(x=>x.id==='pawtie')); }
+  closeQuick(){ if(this._inApp){ this._inApp=false; history.back(); } else location.hash=(this.state.quick&&this.state.quick.glow)?'glow':'shop'; }
+
+  addToCart(){
+    const p=this.state.quick; if(!p) return;
+    const custom = this.state.quickMode==='custom';
+    const unit = p.price + (custom?this.CUSTOM_FEE:0);
+    const qc = this.state.quickColors;
+    const an=this._an&&this._an[p.id], ex=(an&&an.extra)||[];
+    const parts=[...this.partsFor(p).slice(0,Math.min(3,(this.state.quickBase||[]).length)).map(([k,l])=>[k,l])];
+    const colorsLabel = p.glow ? 'Glow yarn: '+(this.state.quickYarn||'White') : custom ? parts.map(([k,l],j)=>{ const b=(this.state.quickBase||[])[j], c=qc[k]||b; return l+': '+(!c?'Not chosen':c===b?'Original':this.colorName(c)); }).join(' / ') : '';
+    const key = p.id+'|'+this.state.quickSize+'|'+(p.glow?this.state.quickYarn:custom?parts.map(([k])=>qc[k]).join(''):'stock');
+    let preview='';
+    try{ const cv=(this._cv&&this._cv.isConnected)?this._cv:null; if(custom&&cv&&!this.state.quickNoPreview&&cv.width) preview=this.shrink(cv); }catch(_){}
+    this.setState(s=>{
+      const cart=s.cart.map(x=>({...x}));
+      const i=cart.findIndex(x=>x.key===key);
+      if(i>=0) cart[i].qty+=s.quickQty;
+      else cart.push({ key, id:p.id, name:p.name, img:p.img, tone:p.tone, size:s.quickSize, unit, qty:s.quickQty, custom, colorsLabel, note:custom?s.quickNote:'', preview });
+      return { cart, cartOpen:true };
+    });
+  }
+  changeQty(key,d){ this.setState(s=>({ cart:s.cart.map(x=>x.key===key?{...x,qty:x.qty+d}:x).filter(x=>x.qty>0) })); }
+  removeItem(key){ this.setState(s=>({ cart:s.cart.filter(x=>x.key!==key) })); }
+  openCart(){ this.setState({ cartOpen:true }); }
+  closeCart(){ this.setState({ cartOpen:false }); }
+  openCheckout(){ if(!this.state.cart.length) return; this._preCheckout=this.state.page||'home'; this.setState({ cartOpen:false, orderPlaced:false, formError:false }); this.go('checkout'); }
+  closeCheckout(){ const back=this._preCheckout&&this._preCheckout!=='checkout'?this._preCheckout:'shop'; this.go(back); this.setState({ cartOpen:true }); }
+  setForm(k,v){ this.setState(s=>({ form:{...s.form,[k]:v}, formError:false })); }
+  setContact(k,v){ this.setState(s=>({ contact:{...s.contact,[k]:v} })); }
+  sendMsg(){ if(!this.state.contact.name.trim()) return; this.setState({ msgSent:true }); }
+  placeOrder(){
+    const f=this.state.form;
+    if(!f.name.trim()||!this.phoneOk()||!f.address.trim()||!this.cityValue()||!/^\S+@\S+\.\S+$/.test(f.email||'')){ this.setState({ formError:true }); return; }
+    if(!this.state.confirmOpen){ this.setState({ confirmOpen:true }); return; }
+    const orderNo='WT'+Math.floor(100000+Math.random()*900000);
+    const sub=this.state.cart.reduce((a,it)=>a+it.unit*it.qty,0), thr=this.props.freeShipThreshold ?? 5000;
+    const placedTotal=sub+(sub>=thr?0:250), placedPay=this.state.form.payment;
+    this.sendOrder(orderNo);
+    this.setState({ confirmOpen:false, orderPlaced:true, orderNo, placedTotal, placedPay, cart:[] });
+  }
+  openExt(e,url){
+    e.preventDefault();
+    let w=null; try{ w=window.top.open(url,'_blank','noopener'); }catch(_){}
+    if(!w){ try{ w=window.open(url,'_blank','noopener'); }catch(_){} }
+    if(!w){ try{ window.top.location.href=url; }catch(_){ window.location.href=url; } }
+  }
+  shrink(src,S=240){ const w=src.naturalWidth||src.width, hh=src.naturalHeight||src.height, k=Math.min(1,S/Math.max(w,hh)); const c=document.createElement('canvas'); c.width=Math.round(w*k); c.height=Math.round(hh*k); const x=c.getContext('2d'); x.fillStyle='#fff'; x.fillRect(0,0,c.width,c.height); x.drawImage(src,0,0,c.width,c.height); return c.toDataURL('image/jpeg',0.82); }
+  async itemImage(it){
+    if(it.preview) return it.preview;
+    const p=this.PRODUCTS.find(x=>x.id===it.id); if(!p) return '';
+    const img=new Image(); await new Promise((ok,err)=>{ img.onload=ok; img.onerror=err; img.src=this.thumb(p); });
+    return this.shrink(img);
+  }
+  CITIES=['Karachi','Lahore','Islamabad','Rawalpindi','Faisalabad','Multan','Peshawar','Quetta','Hyderabad','Gujranwala','Sialkot','Sargodha','Bahawalpur','Sukkur','Larkana','Sheikhupura','Rahim Yar Khan','Jhang','Dera Ghazi Khan','Gujrat','Sahiwal','Wah Cantt','Mardan','Kasur','Okara','Mingora','Nawabshah','Chiniot','Kotri','Kamoke','Hafizabad','Sadiqabad','Mirpur Khas','Burewala','Kohat','Khanewal','Dera Ismail Khan','Turbat','Muzaffargarh','Abbottabad','Mandi Bahauddin','Shikarpur','Jacobabad','Jhelum','Khanpur','Khairpur','Khuzdar','Pakpattan','Hub','Daska','Gojra','Muridke','Bahawalnagar','Samundri','Jaranwala','Chishtian','Attock','Vehari','Kot Abdul Malik','Ferozwala','Chakwal','Gujranwala Cantt','Kamalia','Umerkot','Ahmedpur East','Kot Addu','Wazirabad','Mansehra','Layyah','Mirpur (AJK)','Muzaffarabad (AJK)','Gilgit','Skardu','Swabi','Charsadda','Nowshera','Haripur','Gwadar','Thatta','Badin','Taxila','Murree'].sort();
+  phoneOk(){ const d=String(this.state.form.phone||'').replace(/[^0-9]/g,''); return /^(0?3\d{9}|923\d{9})$/.test(d); }
+  emailOk(){ return /^\S+@\S+\.\S+$/.test((this.state.form.email||'').trim()); }
+  cityValue(){ const f=this.state.form; return f.city==='Other' ? (f.cityOther||'').trim() : (f.city||'').trim(); }
+  BANK=[['Account title','Anas Tanveer Siddiqui',false],['Account number','022422744985',true],['IBAN','PK52RQMI0000022422744985',true],['Bank','Raqami Islamic Digital Bank',false]];
+  copyText(k,v){ const done=()=>{ this.setState({ copied:k }); clearTimeout(this._ct); this._ct=setTimeout(()=>this.setState({copied:''}),1600); };
+    try{ navigator.clipboard.writeText(v).then(done,()=>{ this.fallbackCopy(v); done(); }); }catch(_){ this.fallbackCopy(v); done(); } }
+  fallbackCopy(v){ const t=document.createElement('textarea'); t.value=v; document.body.appendChild(t); t.select(); try{document.execCommand('copy');}catch(_){} t.remove(); }
+  async sendOrder(orderNo){
+    const cartSnap=this.state.cart.slice();
+    const s=this.state, f=s.form, sub=s.cart.reduce((a,it)=>a+it.unit*it.qty,0);
+    const thr=this.props.freeShipThreshold ?? 5000, ship=sub>=thr?0:250;
+    const payload={ orderNo, createdAt:new Date().toISOString(),
+      customer:{ name:f.name.trim(), phone:f.phone.trim(), email:(f.email||'').trim(), address:f.address.trim(), city:this.cityValue() },
+      payment:f.payment, subtotal:sub, shipping:ship, total:sub+ship,
+      hasCustom:s.cart.some(it=>it.custom),
+      items:s.cart.map(it=>{ const P=this.PRODUCTS.find(x=>x.id===it.id)||{}; return { productId:it.id, productName:it.name, material:P.glow?'Crochet (Glow)':(P.mat==='cloth'?'Cloth':'Crochet'), category:({ruffle:'Ruffle Collar',collar:'Collar',bow:'Bow Tie',tie:'Neck Tie',bandana:'Bandana'})[P.cat]||P.cat||'', size:it.size, qty:it.qty, basePrice:it.custom?it.unit-this.CUSTOM_FEE:it.unit, customFee:it.custom?this.CUSTOM_FEE:0, unitPrice:it.unit, lineTotal:it.unit*it.qty,
+        type:it.custom?'Custom':(it.colorsLabel?'Glow':'As pictured'), customColours:it.colorsLabel||'', customNote:it.custom?(it.note||''):'', leadTime:it.custom?'2–7 days':'Ready to ship' }; }),
+      ownerEmail:this.props.ownerEmail ?? 'waggletailspk@gmail.com' };
+    const url=this.props.orderSheetUrl || 'https://script.google.com/macros/s/AKfycbwAju_ahtg5K781S-yowOBDH9j7-gkRtkfCkZibY0C1mNkixoJdmeJilsFQMPlWKYo/exec';
+    if(!url){ console.warn('orderSheetUrl not set — order not sent', payload); return; }
+    try{ const imgs=await Promise.all(cartSnap.map(it=>this.itemImage(it).catch(()=>''))); payload.items.forEach((x,i)=>{ x.image=imgs[i]||''; }); }catch(_){}
+    fetch(url,{ method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:JSON.stringify(payload) }).catch(e=>console.warn('order send failed',e));
+  }
+  resetOrder(){ this.setState({ orderPlaced:false, checkoutOpen:false, orderNo:'', formError:false, form:{name:'',phone:'',address:'',city:'',email:'',payment:'cod'} }); }
+
+  renderVals(){
+    const s=this.state, T=this.TONES, th=this.threshold;
+    const NAVY='#14243f', TEAL='#2bb8b6', CORAL='#f4566b', ORANGE='#f7862a', LINE='#ece2d6', PAPER='#ffffff';
+
+    const TY=this.TYPES, ORDER=['ruffle','collar','bow','tie','bandana'];
+    const MATL={crochet:'Crochet',cloth:'Cloth'};
+    const BADGE={ 'Bestseller':['#fdeedd','#a85c10'], 'New':['#e2f6f5','#12807e'], 'Handmade':['#fee7ea','#c9354a'], 'Limited':['#e9edf3','#14243f'] };
+    const ALL=this.PRODUCTS.filter(p=>this.LIVE.includes(p.id)&&!p.glow), GLOW=this.PRODUCTS.filter(p=>p.glow);
+    const toGlow=()=>this.go('glow');
+    const inMat=(p,m)=>m==='all'||(m==='glow'?p.glow:p.mat===m);
+    const cnt=(m)=>ALL.filter(p=>inMat(p,m)).length;
+    const scrollTo=(m)=>{ this.setState({ mat:m, type:'all', q:'' }); this.scrollShop(); };
+    const matTabs=[['all','All'],['crochet','Crochet'],['cloth','Cloth']].map(([k,l])=>{
+      const on=s.mat===k, glow=k==='glow';
+      return { key:k, label:l, count:cnt(k), onClick:()=>this.setState({ mat:k, type:'all' }),
+        bg:on?(glow?'#0f1a2e':NAVY):'transparent', color:on?(glow?'#c8ff7a':'#fff'):NAVY, shadow:on&&glow?'0 0 16px rgba(200,255,122,.45)':'none' };
+    });
+    const matPool=ALL.filter(p=>inMat(p,s.mat));
+    const typeChips=[['all','All types']].concat(ORDER.filter(t=>matPool.some(p=>p.cat===t)).map(t=>[t,TY[t]])).map(([k,l])=>{
+      const on=s.type===k;
+      return { key:k, label:l, count:k==='all'?matPool.length:matPool.filter(p=>p.cat===k).length, onClick:()=>this.setState({ type:k }),
+        border:on?NAVY:LINE, bg:on?NAVY:PAPER, color:on?'#fff':NAVY };
+    });
+    const needle=s.q.trim().toLowerCase();
+    let list=matPool.filter(p=>(s.type==='all'||p.cat===s.type)&&(!needle||(p.name+' '+p.material).toLowerCase().includes(needle)));
+    if(s.sort==='low') list=[...list].sort((a,b)=>a.price-b.price);
+    if(s.sort==='high') list=[...list].sort((a,b)=>b.price-a.price);
+    const card=(p)=>{ const b=BADGE[p.badge]||['#e9edf3','#14243f'];
+      return { ...p, key:p.id, matLabel:MATL[p.mat]+(p.glow?' · Glow':''), priceLabel:this.fmt(p.price), customLabel:'+'+this.fmt(this.CUSTOM_FEE),
+        slot:'pc-'+p.id, ph:p.name, hasPet:false, pet:this.PETS[p.id]?this.petSrc(this.PETS[p.id][0]):'', img:this.thumb(p), frameW:'100%', frameR:'0', frameB:'0', frameO:this.hasCut(p)?'visible':'hidden', badgeBg:b[0], badgeColor:b[1], onView:()=>this.openQuick(p) }; };
+    const groups=[];
+    const mats=s.mat==='all'?['crochet','cloth']:[s.mat];
+    mats.forEach(m=>ORDER.forEach(t=>{
+      const items=list.filter(p=>p.cat===t&&(m==='glow'||p.mat===m));
+      if(items.length) groups.push({ key:m+t, matLabel:m==='glow'?'Glow in the Dark':MATL[m], eyebrowColor:m==='cloth'?CORAL:(m==='glow'?'#5f9a1c':TEAL), label:TY[t],
+        countLabel:items.length+(items.length===1?' piece':' pieces'), items:items.map(card) });
+    }));
+    const petGallery=[]; ALL.forEach(p=>petGallery.push({ key:p.id, src:this.thumb(p), name:p.name, onClick:()=>this.openQuick(p) }));
+    const glowEmpty=s.mat==='glow'&&cnt('glow')===0;
+    const glowProducts=GLOW.map((p,i)=>({ key:p.id, num:String(i+1).padStart(2,'0'), name:p.name, img:this.thumb(p), material:p.material, priceLabel:this.fmt(p.price), glowHex:p.glowHex, glowLabel:p.name.split(' ').slice(0,2).join(' '), onClick:()=>this.openQuick(p) }));
+    const noResults=!glowEmpty&&list.length===0;
+    const resultLabel=list.length+' handmade pieces'+(s.mat==='all'?' · grouped by craft and style':'');
+    const craftCards=[
+      { key:'crochet', label:'Crochet', desc:'Ruffles, blooms, bows & bandanas', countLabel:cnt('crochet')+' pieces', img:'assets/shop/v3/rosegarden.jpg', slot:'craft-crochet3',
+        bg:PAPER, border:LINE, tileBg:'#f3ebdf', frame:'#fff', shadow:'drop-shadow(0 14px 12px rgba(20,36,63,.22))', fg:NAVY, sub:'#7b7268', chip:LINE, onClick:()=>scrollTo('crochet') },
+      { key:'cloth', label:'Cloth', desc:'Neck ties, bow ties & bandanas', countLabel:cnt('cloth')+' pieces', img:'assets/shop/v3/bandhani.jpg', slot:'craft-cloth2',
+        bg:PAPER, border:LINE, tileBg:'#f3ebdf', frame:'#fff', shadow:'drop-shadow(0 14px 12px rgba(20,36,63,.22))', fg:NAVY, sub:'#7b7268', chip:LINE, onClick:()=>scrollTo('cloth') },
+      { key:'glow', label:'Glow in the Dark', desc:'Crochet that lights up night walks', countLabel:GLOW.length+' pieces · from '+this.fmt(Math.min(...GLOW.map(p=>p.price))), img:'assets/shop/glow/card.jpg', slot:'craft-glow3',
+        bg:'#0f1a2e', border:'#0f1a2e', tileBg:'#14243f', frame:'#c8ff7a', shadow:'drop-shadow(0 0 16px rgba(200,255,122,.75))', fg:'#c8ff7a', sub:'#a9b8cf', chip:'rgba(200,255,122,.5)', onClick:toGlow },
+    ];
+    const ic=(d)=>'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+d+'</svg>';
+    const trust=[
+      { title:'Hand-stitched', sub:'small batches, made to order', color:TEAL,   icon:ic('<path d="M12 3l2.4 5.2 5.6.7-4.2 3.9 1.1 5.6L12 15.8 7.1 18.4l1.1-5.6L4 8.9l5.6-.7z"/>') },
+      { title:'Soft on skin',  sub:'lined bands, no rough seams',  color:CORAL,  icon:ic('<path d="M12 20s-7-4.4-7-9.2A3.9 3.9 0 0112 8a3.9 3.9 0 017 2.8C19 15.6 12 20 12 20z"/>') },
+      { title:'Cash on delivery', sub:'all over Pakistan',         color:ORANGE, icon:ic('<rect x="2.5" y="6" width="19" height="12" rx="2.5"/><circle cx="12" cy="12" r="2.5"/>') },
+      { title:'Free delivery',  sub:'on orders over '+this.fmt(th), color:NAVY,  icon:ic('<path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/>') },
+    ];
+
+    const customPerks=['Crocheted by hand, one at a time','Soft-lined band, no scratchy edges','Charm clips onto any WaggleTails collar','Ready in 2–4 days'];
+
+    const reviews=[
+      { text:"Joey absolutely loved your products. The material is so soft that he is comfortably wearing it. Absolutely neat making. So so good. Inshallah will order again. Very good quality.", name:'Maryam', city:"Joey's mum", photo:'assets/reviews/r4.jpg', color:CORAL },
+      { text:"Loved the quality and stitching of the bow. Looks very cute on my cat. Thanks a lot!", name:'Instagram customer', city:'Bow tie', photo:'assets/reviews/r2.jpg', color:TEAL },
+      { text:"I absolutely love the collars — they are beautifully made and looked very pretty on my cats.", name:'@sorryoutofus…', city:'Crochet collars', photo:'', color:ORANGE },
+      { text:"Both products are very comfortable to wear for my baby. He wore them on his big day — his birthday — and he is so happy. My first experience and it was better than I expected. Inshallah I will continue ordering from you.", name:'Instagram customer', city:'Birthday outfit', photo:'', color:CORAL },
+      { text:"Thanks so much for the collar, it looks great on my cat!", name:'Instagram customer', city:'Bow collar', photo:'assets/reviews/r1.jpg', color:TEAL },
+      { text:"Cute lag rahi hai, tie achi bani hai. Sab se best iska feature hai ke ye adjustable hai.", name:"Stuart's family", city:'Neck tie', photo:'', color:ORANGE },
+      { text:"The bow was really good, I like it.", name:'Instagram customer', city:'Bow tie', photo:'assets/reviews/r3.jpg', color:CORAL },
+      { text:"Mujhe bohat achay lagay hain collars.", name:'Mah Rosh', city:'Crochet collars', photo:'', color:TEAL },
+    ].map(r=>({ ...r, initial:r.name.replace('@','').charAt(0).toUpperCase(), hasPhoto:!!r.photo, noPhoto:!r.photo }));
+
+    const q=s.quick;
+    const quickSizes=['XS','S','M','L'].map(z=>{
+      const on=s.quickSize===z;
+      return { key:z, label:z, onClick:()=>this.setState({quickSize:z}), border:on?NAVY:LINE, bg:on?NAVY:PAPER, color:on?'#fff':NAVY };
+    });
+    const qCustom=s.quickMode==='custom'&&!(q&&q.glow);
+    const yarnOptions=this.YARNS.map(([n,hex])=>{ const on=(s.quickYarn||'White')===n; return { key:n, name:n, hex, onClick:()=>this.setState({quickYarn:n}), border:on?TEAL:LINE, bg:on?'#e2f6f5':PAPER }; });
+    const qTotal=q?(q.price+(qCustom?this.CUSTOM_FEE:0))*s.quickQty:0;
+    const designOptions=q?[['stock','As pictured',this.fmt(q.price)],['custom','Custom colours',this.fmt(q.price+this.CUSTOM_FEE)+' · your pick']].map(([k,t,sub])=>{
+      const on=s.quickMode===k; return { key:k, title:t, sub, onClick:()=>this.setState({quickMode:k}), border:on?TEAL:LINE, bg:on?'#e2f6f5':PAPER };
+    }):[];
+    const setColor=(part,hex)=>this.setState(v=>({ quickColors:{...v.quickColors,[part]:hex} }));
+    const anQ=q&&this._an&&this._an[q.id], extras=(anQ&&anQ.extra)||[];
+    const partDefs=q?[...this.partsFor(q).slice(0,Math.min(3,(s.quickBase||[]).length)).map(([k,label,flex])=>[k,label,flex,(s.quickBase||[])[{main:0,accent:1,detail:2}[k]]]), ]:[];
+    const colorParts=q?partDefs.map(([k,label,flex,b0])=>{
+      const base=b0||'', cur=s.quickColors[k]||base;
+      return { key:k, label, flex, hex:cur||'#ffffff', base, name:!cur?'Not chosen':cur===base?'Original':this.colorName(cur), onPick:(e)=>setColor(k,e.target.value), onReset:()=>setColor(k,base),
+        swatches:this.PALETTE.map(([n,hx])=>{ const on=!!cur&&hx.toLowerCase()===cur.toLowerCase();
+          return { key:n, name:n, hex:hx, onClick:()=>setColor(k,hx), ring:on?NAVY:(hx==='#ffffff'?'#e3d9cb':'transparent'), halo:on?'0 0 0 2px #fff inset':'none' }; }) };
+    }):[];
+
+    const cart=s.cart.map(it=>({
+      ...it, key:it.key, tint:T[it.tone].tint, slot:'cartc-'+it.id, img:this.thumb(it),
+      meta:'Size '+it.size+(it.custom?' · Custom: '+it.colorsLabel+' · 2–7 days':it.colorsLabel?' · '+it.colorsLabel:' · As pictured'),
+      lineLabel:this.fmt(it.unit*it.qty),
+      onInc:()=>this.changeQty(it.key,1), onDec:()=>this.changeQty(it.key,-1), onRemove:()=>this.removeItem(it.key),
+    }));
+    const subtotal=s.cart.reduce((a,x)=>a+x.unit*x.qty,0);
+    const free=subtotal>=th;
+    const shipping=(!s.cart.length||free)?0:250;
+    const total=subtotal+shipping;
+
+    const PAY=[
+      { id:'cod',   title:'Cash on Delivery', sub:'Pay the rider when it arrives' },
+      { id:'bank',  title:'Bank transfer', sub:'Transfer to our account, then send us the screenshot' },
+    ];
+    const payOptions=PAY.map(p=>{
+      const on=s.form.payment===p.id;
+      return { ...p, key:p.id, onClick:()=>this.setForm('payment',p.id), border:on?TEAL:LINE, bg:on?'#e2f6f5':PAPER, dot:on?TEAL:'#c9c0b4', dotFill:on?TEAL:'transparent' };
+    });
+    const errB=(v)=>(s.formError&&!v.trim())?'#e05a5a':LINE;
+
+    const ig=this.props.instagramUrl ?? 'https://www.instagram.com/waggle_tailspk/';
+
+    const page=s.page||'home';
+    const pg={ home:page==='home', glowOn:page==='glow', shop:page==='shop', custom:page==='custom', story:page==='story', contact:page==='contact', reviewsOn:page==='reviews' };
+    const navLinks=[['shop','Shop'],['custom','Charms'],['reviews','★ Reviews'],['story','Our Story'],['contact','Contact']].map(([k,l])=>{ const rv=k==='reviews', on=page===k; return { key:k, href:'#'+k, label:l, line:rv?'transparent':(on?CORAL:'transparent'), color:rv?'#fff':'var(--navy)', bg:rv?CORAL:'transparent', pad:rv?'6px 12px':'6px 0', radius:rv?'20px':'0', shadow:rv&&on?'0 0 0 3px rgba(244,86,107,.25)':'none' }; });
+    return {
+      pg, navLinks, summaryMax:s.form.payment==='bank'?'calc(100vh - 600px)':'calc(100vh - 420px)', showChat:(s.page||'home')!=='checkout',
+      startShopping:()=>{ this.setState({ cartOpen:false }); this.go('shop'); },
+      continueShopping:()=>{ this.resetOrder(); this.go('shop'); },
+      payIsBank:s.form.payment==='bank', placedBank:s.orderPlaced&&s.placedPay==='bank', placedTotalLabel:this.fmt(s.placedTotal||0),
+      bankRows:this.BANK.map(([l,v,c])=>({ key:l, label:l, value:v, canCopy:c, copyLabel:s.copied===l?'Copied ✓':'Copy', onCopy:()=>this.copyText(l,v) })),
+      placedMsg:s.placedPay==='bank'?'Your order #'+s.orderNo+' is saved. Please complete the bank transfer below — we\'ll confirm as soon as we receive your screenshot.':'Your order #'+s.orderNo+' is confirmed. We\'ll WhatsApp you before dispatch — handmade pieces take 2–4 days to stitch and ship (custom pieces 2–7 days).',
+      proofWaHref:'https://wa.me/'+this.waDigits+'?text='+encodeURIComponent('Hi WaggleTails! Payment screenshot for order #'+(s.orderNo||'')+' — '+this.fmt(s.placedTotal||0)+' sent to Raqami account 022422744985.'),
+      openProofWa:(e)=>this.openExt(e,'https://wa.me/'+this.waDigits+'?text='+encodeURIComponent('Hi WaggleTails! Payment screenshot for order #'+(s.orderNo||'')+' — '+this.fmt(s.placedTotal||0)+' sent to Raqami account 022422744985.')),
+      toGlowDesigns:()=>{ const el=document.getElementById('glow-designs'); if(el) window.scrollTo({ top:el.getBoundingClientRect().top+window.scrollY-90, behavior:'smooth' }); },
+      shipMsg: this.props.announcement || 'Free delivery on orders above PKR 5,000 · Cash on delivery all over Pakistan',
+      trust, craftCards, glowProducts, matTabs, typeChips, groups, glowEmpty, noResults, resultLabel, petGallery, customPerks, reviews,
+      q:s.q, onQ:(e)=>this.setState({q:e.target.value}), sort:s.sort, onSort:(e)=>this.setState({sort:e.target.value}),
+      clearFilters:()=>this.setState({q:'',type:'all',mat:'all'}),
+      waHref:'https://wa.me/'+this.waDigits, waLabel:this.props.whatsappNumber ?? '+92 337 2497112',
+      chatOpen:s.chatOpen, toggleChat:()=>this.setState(x=>({chatOpen:!x.chatOpen})), chatBtnLabel:s.chatOpen?'Close':'Chat with us',
+      waChatHref:'https://wa.me/'+this.waDigits+'?text='+encodeURIComponent('Hi WaggleTails! I have a question about your collars.'),
+      igDmHref:'https://ig.me/m/'+ig.split('/').filter(Boolean).pop(),
+      openWaChat:(e)=>this.openExt(e,'https://wa.me/'+this.waDigits+'?text='+encodeURIComponent('Hi WaggleTails! I have a question about your collars.')),
+      openIgDm:(e)=>this.openExt(e,'https://ig.me/m/'+ig.split('/').filter(Boolean).pop()),
+      instaUrl:ig, instaLabel:'@'+ig.split('/').filter(Boolean).pop(),
+      quickAspect:(q&&q.glow)?'428/296':'1/1',
+      backLabel:'Back to '+({glow:'Glow Collection',shop:'Shop',home:'Home',custom:'Charms'}[this._ret]||((q&&q.glow)?'Glow Collection':'Shop')),
+      openCart:()=>this.openCart(), closeCart:()=>this.closeCart(), stop:(e)=>e.stopPropagation(),
+      openCustom:()=>this.openCustom(),
+      cartOpen:s.cartOpen, cart, cartCount:s.cart.reduce((a,x)=>a+x.qty,0),
+      hasCart:s.cart.length>0, cartEmpty:s.cart.length===0,
+      subtotalLabel:this.fmt(subtotal), shippingLabel:free?'Free':this.fmt(shipping),
+      shipColor:free?TEAL:NAVY, totalLabel:this.fmt(total),
+      quickOpen:!!q, closeQuick:()=>this.closeQuick(),
+      quickName:q?q.name:'', quickMaterial:q?q.material:'', quickBadge:q?q.badge:'', quickMatLabel:q?(q.mat==='cloth'?'Cloth':'Crochet'):'', recolorRef:this._cvRef||(this._cvRef=(el)=>{ this._cv=el; if(el) this.schedulePaint(); }), quickShowCanvas:qCustom&&!s.quickNoPreview, quickShowPhoto:!qCustom||!!s.quickNoPreview, quickPhotoSrc:q?this.thumb(q):'', quickThumbs:[],
+      previewNote:(q&&q.glow)?'Shown with its glow-in-the-dark preview. Pick your yarn colour on the right.':qCustom?(s.quickNoPreview?'Live preview isn\'t available for this piece — your maker will follow the colours you pick.':q&&this.canRecolor(q)?'Pick a colour on the right — the photo updates instantly.':'Colour sketch of your piece — pick colours on the right and it updates live.'):'Tap “Custom colours” to open the live colour preview.',
+      quickCustom:qCustom, designOptions, yarnOptions, yarnLabel:s.quickYarn||'White', quickIsGlow:!!(q&&q.glow), quickNotGlow:!(q&&q.glow), colorParts, quickNote:s.quickNote, onQuickNote:(e)=>this.setState({quickNote:e.target.value}),
+      addLabel:qCustom?'Add custom order to bag':'Add to bag',
+      quickTint:q?T[q.tone].tint:'#e2f6f5', quickSlot:q?('quick-'+q.id):'', quickImg:q?('assets/shop/sq/'+q.img):'',
+      quickSizes, quickPetName:s.quickName, onQuickName:(e)=>this.setState({quickName:e.target.value}),
+      quickQty:s.quickQty, quickQtyInc:()=>this.setState(v=>({quickQty:v.quickQty+1})),
+      quickQtyDec:()=>this.setState(v=>({quickQty:Math.max(1,v.quickQty-1)})),
+      quickTotalLabel:this.fmt(qTotal), addToCart:()=>this.addToCart(),
+      checkoutOpen:(s.page||'home')==='checkout', checkoutForm:!s.orderPlaced, orderPlaced:s.orderPlaced, orderNo:s.orderNo,
+      closeCheckout:()=>this.closeCheckout(), placeOrder:()=>this.placeOrder(), resetOrder:()=>this.resetOrder(),
+      openCheckout:()=>this.openCheckout(), formError:s.formError,
+      fName:s.form.name, fPhone:s.form.phone, fAddress:s.form.address, fCity:s.form.city, fEmail:s.form.email||'', fEmailBorder:(s.formError&&!/^\S+@\S+\.\S+$/.test(s.form.email||''))?'#e05a5a':LINE, onFEmail:(e)=>this.setForm('email',e.target.value), orderSending:!!s.orderSending,
+      fNameBorder:errB(s.form.name), fPhoneBorder:(s.formError&&!this.phoneOk())?'#e05a5a':LINE,
+      formErrorMsg:'Please fill in: '+[!s.form.name.trim()&&'name', !this.phoneOk()&&'a valid mobile number (03XX XXXXXXX)', !this.emailOk()&&'a valid email', !s.form.address.trim()&&'address', !this.cityValue()&&'city'].filter(Boolean).join(', ')+'.', fAddressBorder:errB(s.form.address),
+      onFName:(e)=>this.setForm('name',e.target.value), onFPhone:(e)=>this.setForm('phone',e.target.value),
+      onFAddress:(e)=>this.setForm('address',e.target.value), onFCity:(e)=>this.setForm('city',e.target.value),
+      cityOptions:this.CITIES.map(c=>({ key:c, value:c, label:c })).concat([{ key:'__other', value:'Other', label:'Other (type your city)' }]),
+      cityOther:s.form.city==='Other', fCityOther:s.form.cityOther||'', onFCityOther:(e)=>this.setForm('cityOther',e.target.value),
+      fCityBorder:(s.formError&&!this.cityValue())?'#e05a5a':LINE,
+      payOptions, confirmOpen:s.confirmOpen, cancelConfirm:()=>this.setState({confirmOpen:false}), confirmOrder:()=>this.placeOrder(),
+      confirmItems:s.cart.map(it=>({ key:it.key, name:it.name+' ×'+it.qty, meta:'Size '+it.size+(it.custom?' · Custom: '+it.colorsLabel+(it.note?' · “'+it.note+'”':''):it.colorsLabel?' · '+it.colorsLabel:' · As pictured'), line:this.fmt(it.unit*it.qty) })),
+      confirmHasCustom:s.cart.some(it=>it.custom), confirmTotal:this.fmt(total), confirmName:s.form.name, confirmPhone:s.form.phone, confirmAddr:s.form.address+(s.form.city?', '+s.form.city:''),
+      msgSent:s.msgSent, msgNotSent:!s.msgSent,
+      cName:s.contact.name, cPhone:s.contact.phone, cMsg:s.contact.msg,
+      onCName:(e)=>this.setContact('name',e.target.value), onCPhone:(e)=>this.setContact('phone',e.target.value),
+      onCMsg:(e)=>this.setContact('msg',e.target.value), sendMsg:()=>this.sendMsg(),
+    };
+  }
+}
+</script>
+</body>
+</html>
